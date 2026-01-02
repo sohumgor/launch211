@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 220 80% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 95%;
+    --secondary-foreground: 220 80% 28%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 180 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 220 80% 28%;
+
+    --radius: 0.75rem;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(220, 80%, 28%), hsl(180, 70%, 45%));
+    --gradient-card: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(220, 20%, 98%));
+    --shadow-elegant: 0 10px 30px -10px hsl(220, 80%, 28%, 0.15);
+    --shadow-hover: 0 20px 40px -15px hsl(220, 80%, 28%, 0.25);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Section gradients - mostly white with vivid color blobs at corners/edges */
+    --gradient-section-1: linear-gradient(180deg, hsl(220, 70%, 97%), hsl(180, 60%, 97%));
+    --gradient-section-2: radial-gradient(ellipse at top left, hsl(220, 85%, 88%) 0%, hsl(0, 0%, 100%) 40%), radial-gradient(ellipse at bottom right, hsl(180, 80%, 88%) 0%, hsl(0, 0%, 100%) 40%), radial-gradient(ellipse at center, hsl(200, 75%, 95%) 0%, hsl(0, 0%, 100%) 50%);
+    --gradient-section-3: radial-gradient(ellipse at top right, hsl(180, 85%, 88%) 0%, hsl(0, 0%, 100%) 40%), radial-gradient(ellipse at bottom left, hsl(220, 80%, 88%) 0%, hsl(0, 0%, 100%) 40%), radial-gradient(ellipse at center, hsl(200, 70%, 95%) 0%, hsl(0, 0%, 100%) 50%);
+    --gradient-section-4: radial-gradient(ellipse at top left, hsl(180, 80%, 88%) 0%, hsl(0, 0%, 100%) 40%), radial-gradient(ellipse at bottom right, hsl(220, 85%, 88%) 0%, hsl(0, 0%, 100%) 40%), radial-gradient(ellipse at center, hsl(210, 75%, 95%) 0%, hsl(0, 0%, 100%) 50%);
+    --gradient-section-5: hsl(0, 0%, 100%);
+    --gradient-section-6: linear-gradient(180deg, hsl(180, 60%, 97%), hsl(220, 70%, 97%));
+    --gradient-page-header: linear-gradient(180deg, hsl(220, 75%, 96%), hsl(180, 65%, 96%));
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 180 70% 45%;
+    --primary-foreground: 220 25% 10%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 180 70% 45%;
+    --accent-foreground: 220 25% 10%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 180 70% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
