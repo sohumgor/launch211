@@ -251,7 +251,7 @@ const MarketingChallenge = () => {
                 </div>
                 <Button asChild className="w-full gap-2 text-sm">
                   <a
-                    href="/documents/Marketing.pdf"
+                    href={`${import.meta.env.BASE_URL}documents/Marketing.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -259,7 +259,6 @@ const MarketingChallenge = () => {
                     View PDF
                   </a>
                 </Button>
-
               </div>
             </Card>
 
