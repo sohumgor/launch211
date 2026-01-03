@@ -389,12 +389,20 @@ const FinanceChallenge = () => {
                     <p className="text-xs md:text-sm text-muted-foreground">View the official judging criteria and rating sheet for the portfolio presentation round</p>
                   </div>
                 </div>
-                <Button asChild variant="outline" className="w-full gap-2 text-sm border-accent/30 hover:bg-accent/10">
-                  <a href="/documents/Stock_Market_Judging.pdf" target="_blank" rel="noopener noreferrer">
-                    <Download size={16} />
-                    View PDF
-                  </a>
-                </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="w-full gap-2 text-sm border-accent/30 hover:bg-accent/10"
+            >
+              <a
+                href={`${import.meta.env.BASE_URL}documents/Stock_Market_Judging.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download size={16} />
+                View PDF
+              </a>
+            </Button>
               </div>
             </Card>
 
