@@ -250,7 +250,11 @@ const MarketingChallenge = () => {
                   </div>
                 </div>
                 <Button asChild className="w-full gap-2 text-sm">
-                  <a href="/documents/Marketing.pdf" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={`${process.env.PUBLIC_URL}/documents/Marketing.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Download size={16} />
                     View PDF
                   </a>
