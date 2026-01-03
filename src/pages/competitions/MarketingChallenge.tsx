@@ -277,20 +277,38 @@ const MarketingChallenge = () => {
                     <h3 className="font-semibold text-sm md:text-base">Sample Role Play #1</h3>
                     <p className="text-xs md:text-sm text-muted-foreground">Practice scenario with market expansion focus</p>
                   </div>
-                  <Button asChild size="sm" variant="outline" className="gap-2 w-full sm:w-auto flex-shrink-0">
-                    <a href="/documents/Marketing_Sample_1.pdf" target="_blank" rel="noopener noreferrer">
-                      <Download size={14} />
-                      Download
-                    </a>
-                  </Button>
+                <Button
+                  asChild
+                  size="sm"
+                  variant="outline"
+                  className="gap-2 w-full sm:w-auto flex-shrink-0"
+                >
+                  <a
+                    href={`${import.meta.env.BASE_URL}documents/Marketing_Sample_1.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download size={14} />
+                    Download
+                  </a>
+                </Button>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3 p-3 bg-primary/5 rounded-lg border border-primary/20">
                   <div className="min-w-0">
                     <h3 className="font-semibold text-sm md:text-base">Sample Role Play #2</h3>
                     <p className="text-xs md:text-sm text-muted-foreground">Practice scenario with competitive strategy focus</p>
                   </div>
-                  <Button asChild size="sm" variant="outline" className="gap-2 w-full sm:w-auto flex-shrink-0">
-                    <a href="/documents/Marketing_Sample_2.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="outline"
+                    className="gap-2 w-full sm:w-auto flex-shrink-0"
+                  >
+                    <a
+                      href={`${import.meta.env.BASE_URL}documents/Marketing_Sample_2.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Download size={14} />
                       Download
                     </a>
@@ -301,8 +319,17 @@ const MarketingChallenge = () => {
                     <h3 className="font-semibold text-sm md:text-base">Sample Role Play #3</h3>
                     <p className="text-xs md:text-sm text-muted-foreground">Practice scenario with brand positioning focus</p>
                   </div>
-                  <Button asChild size="sm" variant="outline" className="gap-2 w-full sm:w-auto flex-shrink-0">
-                    <a href="/documents/Marketing_Sample_3.pdf" target="_blank" rel="noopener noreferrer">
+                <Button
+                    asChild
+                    size="sm"
+                    variant="outline"
+                    className="gap-2 w-full sm:w-auto flex-shrink-0"
+                  >
+                    <a
+                      href={`${import.meta.env.BASE_URL}documents/Marketing_Sample_3.pdf`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Download size={14} />
                       Download
                     </a>
