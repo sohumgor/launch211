@@ -16,10 +16,10 @@ const Navbar = () => {
   const [competitionsOpen, setCompetitionsOpen] = useState(false);
 
   const competitions = [
-    { name: "Marketing Challenge", path: "/competitions/marketing" },
-    { name: "Business Ethics Competition", path: "/competitions/ethics" },
-    { name: "Finance & Investing Stock Market Challenge", path: "/competitions/finance" },
-    { name: "VC Pitch Competition", path: "/competitions/pitch" },
+    { name: "Marketing RP", path: "/competitions/marketing" },
+    { name: "Business Ethics RP", path: "/competitions/ethics" },
+    { name: "Stock Market Simulation", path: "/competitions/finance" },
+    { name: "Big Pitch Competition", path: "/competitions/pitch" },
   ];
 
   return (

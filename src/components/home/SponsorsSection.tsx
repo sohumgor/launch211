@@ -18,14 +18,13 @@ const SponsorsSection = () => {
         <div className="text-center mb-12 space-y-4 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold">Our Sponsors</h2>
           <p className="text-xl text-muted-foreground">
-            Proudly supported by leading businesses and organizations
+            Sponsors will be announced soon
           </p>
         </div>
 
         {/* Scrolling Carousel - Desktop */}
-        <div className="relative hidden md:block">
+        {/* <div className="relative hidden md:block">
           <div className="flex animate-scroll">
-            {/* First set of sponsors */}
             {sponsors.map((sponsor, index) => (
               <div
                 key={`sponsor-1-${index}`}
@@ -37,7 +36,6 @@ const SponsorsSection = () => {
                 </span>
               </div>
             ))}
-            {/* Duplicate set for seamless loop */}
             {sponsors.map((sponsor, index) => (
               <div
                 key={`sponsor-2-${index}`}
@@ -50,12 +48,11 @@ const SponsorsSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Scrolling Carousel - Mobile (Scaled Down) */}
-        <div className="relative md:hidden">
+        {/* <div className="relative md:hidden">
           <div className="flex animate-scroll">
-            {/* First set of sponsors */}
             {sponsors.map((sponsor, index) => (
               <div
                 key={`sponsor-mobile-1-${index}`}
@@ -67,7 +64,6 @@ const SponsorsSection = () => {
                 </span>
               </div>
             ))}
-            {/* Duplicate set for seamless loop */}
             {sponsors.map((sponsor, index) => (
               <div
                 key={`sponsor-mobile-2-${index}`}
@@ -80,10 +76,10 @@ const SponsorsSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <style>{`
+      {/* <style>{`
         @keyframes scroll {
           0% {
             transform: translateX(0);
@@ -101,7 +97,7 @@ const SponsorsSection = () => {
         .animate-scroll:hover {
           animation-play-state: paused;
         }
-      `}</style>
+      `}</style> */}
     </section>
   );
 };

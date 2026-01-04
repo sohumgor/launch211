@@ -9,7 +9,7 @@ const DateLocationBar = () => {
             <Calendar size={20} className="md:w-7 md:h-7" />
             <div>
               <div className="text-xs md:text-sm opacity-90">Date</div>
-              <div className="text-sm md:text-xl font-bold">March 15, 2025</div>
+              <div className="text-sm md:text-xl font-bold">March 7, 2025</div>
             </div>
           </div>
           <div className="w-px h-10 md:h-12 bg-border" />
@@ -17,7 +17,14 @@ const DateLocationBar = () => {
             <MapPin size={20} className="md:w-7 md:h-7" />
             <div>
               <div className="text-xs md:text-sm opacity-90">Location</div>
-              <div className="text-sm md:text-xl font-bold">District 211 Conference Center</div>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=1111+N+Rohlwing+Rd,+Palatine,+IL+60074"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm md:text-xl font-bold hover:text-primary transition-colors underline decoration-dotted underline-offset-4"
+              >
+                Palatine High School
+              </a>
             </div>
           </div>
         </div>

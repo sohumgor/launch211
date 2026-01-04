@@ -33,7 +33,7 @@ const PrizesSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold">Total Prize Pool</h2>
           <div className="my-8">
             <div className="text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              $36,000
+              $TBD
             </div>
           </div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

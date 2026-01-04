@@ -23,7 +23,7 @@ const HeroSection = () => {
             Launch 211
           </h1>
           <p className="text-lg md:text-2xl text-primary-foreground/90 leading-relaxed">
-            District 211's Premier Business Competition & Workshop Event for High School Students
+            District 211's Premier Business Competition & Mentorship Event for High School Students
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link to="/registration">

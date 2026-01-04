@@ -42,7 +42,7 @@ const CareerPanel = () => {
     }
   ];
 
-  const speakers = [
+  {/* const speakers = [
     {
       name: "Speaker Name",
       title: "Business Professional",
@@ -71,7 +71,7 @@ const CareerPanel = () => {
       bio: "A seasoned professional with years of experience in competitive industries, offering insights on career development and leadership skills.",
       image: "/placeholder.svg"
     }
-  ];
+  ]; */}
 
   return (
     <div className="min-h-screen bg-background">
@@ -182,7 +182,7 @@ const CareerPanel = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
+              {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
                 {speakers.map((speaker, index) => (
                   <Card key={index} className="p-3 md:p-4 bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all group text-center">
                     <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-2 md:mb-3 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
@@ -202,16 +202,16 @@ const CareerPanel = () => {
                     </p>
                   </Card>
                 ))}
-              </div>
+              </div> */}
               
-              <p className="text-center text-[10px] md:text-xs text-muted-foreground mt-4 md:mt-6 italic">
+              <p className="text-center text-sm md:text-base text-muted-foreground italic">
                 Speaker lineup will be announced soon.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Who Should Attend */}
+        {/* Who Should Attend 
         <section className="py-6 md:py-10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
@@ -239,6 +239,7 @@ const CareerPanel = () => {
             </div>
           </div>
         </section>
+        */}
 
         {/* CTA Section */}
         <section className="py-8 md:py-12 bg-gradient-to-br from-primary/10 to-accent/10">

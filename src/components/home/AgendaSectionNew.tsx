@@ -52,10 +52,10 @@ const AgendaSectionNew = () => {
       rowIcon: <Trophy className="w-4 h-4" />,
       isHighlight: true,
       events: [
-        { name: "Marketing RP", path: "/competitions/marketing", color: "bg-primary/90 hover:bg-primary text-white", icon: <Megaphone className="w-3.5 h-3.5" /> },
-        { name: "Business Ethics RP", path: "/competitions/ethics", color: "bg-accent/90 hover:bg-accent text-white", icon: <Scale className="w-3.5 h-3.5" /> },
-        { name: "Stock Market Sim", path: "/competitions/finance", color: "bg-primary/90 hover:bg-primary text-white", icon: <TrendingUp className="w-3.5 h-3.5" /> },
-        { name: "Big Pitch", path: "/competitions/pitch", color: "bg-accent/90 hover:bg-accent text-white", icon: <Rocket className="w-3.5 h-3.5" /> },
+        { name: "Marketing Role Play", path: "/competitions/marketing", color: "bg-primary/90 hover:bg-primary text-white", icon: <Megaphone className="w-3.5 h-3.5" /> },
+        { name: "Business Ethics Role Play", path: "/competitions/ethics", color: "bg-accent/90 hover:bg-accent text-white", icon: <Scale className="w-3.5 h-3.5" /> },
+        { name: "Stock Market Simulation (Round 2)", path: "/competitions/finance", color: "bg-primary/90 hover:bg-primary text-white", icon: <TrendingUp className="w-3.5 h-3.5" /> },
+        { name: "Big Pitch Competition", path: "/competitions/pitch", color: "bg-accent/90 hover:bg-accent text-white", icon: <Rocket className="w-3.5 h-3.5" /> },
       ],
     },
     {

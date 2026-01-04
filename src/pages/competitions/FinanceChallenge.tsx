@@ -81,20 +81,23 @@ const FinanceChallenge = () => {
             <Card className="p-4 md:p-8 bg-gradient-to-br from-primary/10 via-[hsl(195,70%,95%)] to-accent/10 border-accent/30 shadow-lg">
               <h2 className="text-base md:text-3xl font-bold mb-3 md:mb-8 text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Competition Prizes</h2>
               <div className="grid grid-cols-3 gap-3 md:gap-6">
-                <div className="text-center space-y-1">
+                <div className="text-center space-y-2 md:space-y-3">
                   <div className="text-2xl md:text-5xl font-bold text-primary">1st</div>
-                  <div className="text-lg md:text-3xl font-bold">$5,000</div>
-                  <div className="text-[10px] md:text-sm text-muted-foreground">Winner Certificate</div>
+                  <div className="text-xl md:text-4xl font-bold">$TBD</div>
+                  <div className="text-xs md:text-base text-muted-foreground italic">per team member</div>
+                  <div className="text-xs md:text-sm text-muted-foreground pt-1 md:pt-2 border-t border-border/30">1st Place Medals</div>
                 </div>
-                <div className="text-center space-y-1">
+                <div className="text-center space-y-2 md:space-y-3">
                   <div className="text-2xl md:text-5xl font-bold text-accent">2nd</div>
-                  <div className="text-lg md:text-3xl font-bold">$2,500</div>
-                  <div className="text-[10px] md:text-sm text-muted-foreground">Runner-up Certificate</div>
+                  <div className="text-xl md:text-4xl font-bold">$TBD</div>
+                  <div className="text-xs md:text-base text-muted-foreground italic">per team member</div>
+                  <div className="text-xs md:text-sm text-muted-foreground pt-1 md:pt-2 border-t border-border/30">2nd Place Medals</div>
                 </div>
-                <div className="text-center space-y-1">
+                <div className="text-center space-y-2 md:space-y-3">
                   <div className="text-2xl md:text-5xl font-bold text-primary">3rd</div>
-                  <div className="text-lg md:text-3xl font-bold">$1,000</div>
-                  <div className="text-[10px] md:text-sm text-muted-foreground">Participant Certificate</div>
+                  <div className="text-xl md:text-4xl font-bold">$TBD</div>
+                  <div className="text-xs md:text-base text-muted-foreground italic">per team member</div>
+                  <div className="text-xs md:text-sm text-muted-foreground pt-1 md:pt-2 border-t border-border/30">3rd Place Medals</div>
                 </div>
               </div>
             </Card>
@@ -249,7 +252,7 @@ const FinanceChallenge = () => {
                     Question & Answer (3 minutes)
                   </h3>
                   <p className="text-muted-foreground ml-5 md:ml-7 text-[10px] md:text-base">
-                    The judge asks standard questions plus any team-specific questions to determine understanding and probe critical thinking. Every team member must participate by responding to at least one question during this session.
+                    The judges ask standard questions plus any team-specific questions to determine understanding and probe critical thinking. Every team member must participate by responding to at least one question during this session.
                   </p>
                 </div>
               </div>
@@ -406,7 +409,7 @@ const FinanceChallenge = () => {
               </div>
             </Card>
 
-            {/* Judges Section */}
+            {/* Judges Section 
             <Card className="p-4 md:p-8 bg-card border-accent/20 shadow-md">
               <h2 className="text-base md:text-3xl font-bold mb-3 md:mb-8 text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Meet the Judges</h2>
               <div className="grid grid-cols-3 gap-3 md:gap-8">
@@ -423,7 +426,7 @@ const FinanceChallenge = () => {
                 ))}
               </div>
             </Card>
-
+              */}
             <div className="text-center space-y-4 pt-4">
               <Link to="/registration">
                 <Button size="lg" className="text-lg px-8 transition-all hover:scale-105">

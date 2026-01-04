@@ -12,7 +12,7 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
               Launch 211
             </h3>
             <p className="text-xs md:text-sm text-muted-foreground">
-              A premier business competition and workshop event for high school students in District 211.
+              A premier business competition and workshop event for high school students in District 211 and beyond.
             </p>
           </div>
 
@@ -22,11 +22,16 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
             <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail size={14} className="md:w-4 md:h-4" />
-                <span>info@launch211.org</span>
+                <a 
+                  href="mailto:launch211team@gmail.com"
+                  className="hover:text-primary transition-colors"
+                >
+                  launch211team@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin size={14} className="md:w-4 md:h-4" />
-                <span>District 211, Illinois</span>
+                <span>Palatine, Illinois</span>
               </li>
             </ul>
           </div>
