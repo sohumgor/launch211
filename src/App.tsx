@@ -16,6 +16,7 @@ import MarketingWorkshop from "./pages/workshops/MarketingWorkshop";
 import EthicsWorkshop from "./pages/workshops/EthicsWorkshop";
 import FinanceWorkshop from "./pages/workshops/FinanceWorkshop";
 import PitchWorkshop from "./pages/workshops/PitchWorkshop";
+import CareerPanel from "./pages/events/CareerPanel";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/workshops/finance" element={<FinanceWorkshop />} />
           <Route path="/workshops/pitch" element={<PitchWorkshop />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/events/career-panel" element={<CareerPanel />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
