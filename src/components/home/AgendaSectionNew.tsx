@@ -10,7 +10,8 @@ import {
   Rocket,
   Coffee,
   Trophy,
-  Users
+  Users,
+  Bus
 } from "lucide-react";
 
 type ScheduleEvent = {
@@ -31,6 +32,16 @@ type ScheduleRow = {
 
 const AgendaSectionNew = () => {
   const schedule: ScheduleRow[] = [
+    {
+      time: "7:30 - 7:45 AM",
+      rowIcon: <Bus className="w-4 h-4" />,
+      events: [{ 
+        name: "Arrival — Students arrive by bus from their school with Launch 211 sponsor(s)", 
+        path: null, 
+        color: null,
+        colspan: 1 
+      }],
+    },
     {
       time: "8:00 - 9:00 AM",
       rowIcon: <Users className="w-4 h-4" />,

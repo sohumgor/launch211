@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { DollarSign, Clock, Users, Trophy, Target, FileText, Download, BookOpen, Lightbulb, CheckCircle2 } from "lucide-react";
+import { DollarSign, Clock, Users, Trophy, Target, FileText, Download, BookOpen, Lightbulb, CheckCircle2, Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FinanceChallenge = () => {
@@ -58,6 +58,23 @@ const FinanceChallenge = () => {
 
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-12">
+            <Card className="p-2 md:p-4 bg-card border-border/50">
+  <div className="flex items-center justify-between gap-2">
+    <div className="flex items-center gap-1.5 min-w-0">
+      <Calendar className="text-primary w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+      <div className="min-w-0">
+        <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Registration Deadline: </span>
+        <span className="font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">TBD</span>
+      </div>
+    </div>
+    <Link to="/registration" className="flex-shrink-0">
+      <Button size="sm" variant="ghost" className="gap-1 text-[10px] sm:text-xs md:text-sm h-7 sm:h-8 px-2 sm:px-3 md:px-3">
+        Details
+        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+      </Button>
+    </Link>
+  </div>
+</Card>
             {/* Quick Info */}
             <div className="grid grid-cols-3 gap-2 md:gap-4">
               <Card className="p-2 md:p-4 text-center bg-card border-accent/20 shadow-md">
@@ -131,7 +148,99 @@ const FinanceChallenge = () => {
                 ))}
               </div>
             </Card>
+            <Card className="p-4 md:p-6 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+              <div className="flex items-center gap-2 mb-4">
+                <Calendar className="text-primary w-5 h-5 md:w-6 md:h-6" />
+                <h2 className="text-lg md:text-2xl font-bold">Competition Timeline</h2>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border/50">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-xs md:text-sm font-bold text-primary">1</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+                      <h3 className="font-semibold text-sm md:text-base">Round 1 Registration Deadline</h3>
+                      <span className="text-xs md:text-sm font-semibold text-primary">TBD</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-muted-foreground mt-1">Register through your school's business department head or Launch 211 sponsor</p>
+                  </div>
+                </div>
 
+                <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border/50">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                    <span className="text-xs md:text-sm font-bold text-accent">2</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+                      <h3 className="font-semibold text-sm md:text-base">Platform Access & Setup</h3>
+                      <span className="text-xs md:text-sm font-semibold text-accent">TBD</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-muted-foreground mt-1">Teams receive access codes and set up accounts on How The Market Works</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border/50">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-xs md:text-sm font-bold text-primary">3</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+                      <h3 className="font-semibold text-sm md:text-base">Trading Period Begins</h3>
+                      <span className="text-xs md:text-sm font-semibold text-primary">TBD</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-muted-foreground mt-1">2-week simulation starts with $100,000 virtual capital per team</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border/50">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                    <span className="text-xs md:text-sm font-bold text-accent">4</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+                      <h3 className="font-semibold text-sm md:text-base">Trading Period Ends</h3>
+                      <span className="text-xs md:text-sm font-semibold text-accent">TBD</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-muted-foreground mt-1">Final portfolios locked; top 10 teams calculated</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-3 bg-card rounded-lg border border-border/50">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-xs md:text-sm font-bold text-primary">5</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+                      <h3 className="font-semibold text-sm md:text-base">Round 2 Finalists Announced</h3>
+                      <span className="text-xs md:text-sm font-semibold text-primary">TBD</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-muted-foreground mt-1">Top 10 teams notified and given presentation guidelines</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-3 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg border border-primary/30">
+                  <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center">
+                    <Trophy className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
+                      <h3 className="font-semibold text-sm md:text-base">Round 2: In-Person Presentations</h3>
+                      <span className="text-xs md:text-sm font-semibold text-primary">TBD</span>
+                    </div>
+                    <p className="text-xs md:text-sm text-muted-foreground mt-1">Finalists present portfolios at Palatine High School</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <Link to="/registration">
+                  <Button size="sm" variant="ghost" className="gap-1 text-xs md:text-sm">
+                    Registration Details
+                    <ArrowRight size={14} />
+                  </Button>
+                </Link>
+              </div>
+            </Card>
             {/* Round 1 - Detailed Section */}
             <Card className="p-4 md:p-8 bg-card border-accent/20 shadow-md">
               <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent flex items-center gap-2">

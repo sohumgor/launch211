@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Clock, Users, Trophy, Target, FileText, Download, BookOpen, Lightbulb, CheckCircle2 } from "lucide-react";
+import { TrendingUp, Clock, Users, Trophy, Target, FileText, Download, BookOpen, Lightbulb, CheckCircle2, Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const MarketingChallenge = () => {
@@ -61,6 +61,24 @@ const MarketingChallenge = () => {
 
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-6 md:space-y-12">
+            <Card className="p-2 md:p-4 bg-card border-border/50">
+  <div className="flex items-center justify-between gap-2">
+    <div className="flex items-center gap-1.5 min-w-0">
+      <Calendar className="text-primary w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+      <div className="min-w-0">
+        <span className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Registration Deadline: </span>
+        <span className="font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">TBD</span>
+      </div>
+    </div>
+    <Link to="/registration" className="flex-shrink-0">
+      <Button size="sm" variant="ghost" className="gap-1 text-[10px] sm:text-xs md:text-sm h-7 sm:h-8 px-2 sm:px-3 md:px-3">
+        Details
+        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+      </Button>
+    </Link>
+  </div>
+</Card>
+
             {/* Quick Info */}
             <div className="grid grid-cols-3 gap-2 md:gap-4">
               <Card className="p-2 md:p-4 text-center bg-card border-accent/20 shadow-md">
