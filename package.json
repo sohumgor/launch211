@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://sohumgor.github.io/launch211/",
+  "homepage":"https://www.launch211.org",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
