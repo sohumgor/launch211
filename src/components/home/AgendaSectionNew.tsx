@@ -65,8 +65,8 @@ const AgendaSectionNew = () => {
       events: [
         { name: "Marketing Role Play", path: "/competitions/marketing", color: "bg-primary/90 hover:bg-primary text-white", icon: <Megaphone className="w-3.5 h-3.5" /> },
         { name: "Business Ethics Role Play", path: "/competitions/ethics", color: "bg-accent/90 hover:bg-accent text-white", icon: <Scale className="w-3.5 h-3.5" /> },
-        { name: "Stock Market Simulation (Round 2)", path: "/competitions/finance", color: "bg-primary/90 hover:bg-primary text-white", icon: <TrendingUp className="w-3.5 h-3.5" /> },
-        { name: "Big Pitch Competition", path: "/competitions/pitch", color: "bg-accent/90 hover:bg-accent text-white", icon: <Rocket className="w-3.5 h-3.5" /> },
+        { name: "Stock Market Simulation (Round 2)", path: "/competition/investing", color: "bg-primary/90 hover:bg-primary text-white", icon: <TrendingUp className="w-3.5 h-3.5" /> },
+        { name: "Venture Pitch Competition", path: "/competitions/pitch", color: "bg-accent/90 hover:bg-accent text-white", icon: <Rocket className="w-3.5 h-3.5" /> },
       ],
     },
     {

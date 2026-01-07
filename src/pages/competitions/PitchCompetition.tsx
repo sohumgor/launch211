@@ -36,7 +36,7 @@ const PitchCompetition = () => {
               <div className="inline-flex p-4 rounded-full bg-gradient-to-br from-accent to-primary mb-4">
                 <Lightbulb className="text-primary-foreground" size={40} />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold">Big Pitch Competition</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">Venture Pitch Competition</h1>
               <p className="text-xl text-muted-foreground">
                 Pitch your startup idea to real venture capitalists
               </p>

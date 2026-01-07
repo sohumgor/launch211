@@ -18,8 +18,8 @@ const Navbar = () => {
   const competitions = [
     { name: "Marketing RP", path: "/competitions/marketing" },
     { name: "Business Ethics RP", path: "/competitions/ethics" },
-    { name: "Stock Market Simulation", path: "/competitions/finance" },
-    { name: "Big Pitch Competition", path: "/competitions/pitch" },
+    { name: "Stock Market Simulation", path: "/competitions/investing" },
+    { name: "Venture Pitch Competition", path: "/competitions/pitch" },
   ];
 
   return (

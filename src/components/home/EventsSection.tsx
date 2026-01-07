@@ -23,16 +23,16 @@ const EventsSection = () => {
       path: "/competitions/ethics",
     },
     {
-      title: "Big Pitch Competition",
-      description: "Pitch your innovative business idea to a panel of judges.",
-      icon: <Presentation className="w-5 h-5 md:w-6 md:h-6" />,
-      path: "/competitions/pitch",
-    },
-    {
       title: "Stock Market Simulation",
       description: "Manage a virtual portfolio and present your strategy.",
       icon: <TrendingUp className="w-5 h-5 md:w-6 md:h-6" />,
-      path: "/competitions/finance",
+      path: "/competitions/investing",
+    },
+    {
+      title: "Venture Pitch Competition",
+      description: "Pitch your innovative business idea to a panel of judges.",
+      icon: <Presentation className="w-5 h-5 md:w-6 md:h-6" />,
+      path: "/competitions/pitch",
     }
   ];
 

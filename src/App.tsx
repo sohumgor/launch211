@@ -12,10 +12,6 @@ import MarketingChallenge from "./pages/competitions/MarketingChallenge";
 import EthicsCompetition from "./pages/competitions/EthicsCompetition";
 import FinanceChallenge from "./pages/competitions/FinanceChallenge";
 import PitchCompetition from "./pages/competitions/PitchCompetition";
-import MarketingWorkshop from "./pages/workshops/MarketingWorkshop";
-import EthicsWorkshop from "./pages/workshops/EthicsWorkshop";
-import FinanceWorkshop from "./pages/workshops/FinanceWorkshop";
-import PitchWorkshop from "./pages/workshops/PitchWorkshop";
 import CareerPanel from "./pages/events/CareerPanel";
 
 const queryClient = new QueryClient();
@@ -52,12 +48,8 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/competitions/marketing" element={<MarketingChallenge />} />
           <Route path="/competitions/ethics" element={<EthicsCompetition />} />
-          <Route path="/competitions/finance" element={<FinanceChallenge />} />
+          <Route path="/competitions/investing" element={<FinanceChallenge />} />
           <Route path="/competitions/pitch" element={<PitchCompetition />} />
-          <Route path="/workshops/marketing" element={<MarketingWorkshop />} />
-          <Route path="/workshops/ethics" element={<EthicsWorkshop />} />
-          <Route path="/workshops/finance" element={<FinanceWorkshop />} />
-          <Route path="/workshops/pitch" element={<PitchWorkshop />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/events/career-panel" element={<CareerPanel />} />
           <Route path="*" element={<NotFound />} />
