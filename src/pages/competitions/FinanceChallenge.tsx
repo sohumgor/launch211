@@ -349,7 +349,7 @@ const FinanceChallenge = () => {
                 <div>
                   <h3 className="font-semibold text-xs md:text-lg mb-1 md:mb-2 flex items-center gap-2">
                     <Target className="text-primary" size={16} />
-                    Presentation (7 minutes)
+                    Presentation (7-10 minutes)
                   </h3>
                   <p className="text-muted-foreground ml-5 md:ml-7 text-[10px] md:text-base">
                     The team delivers their investment strategy analysis, portfolio rationale, and key insights. The timekeeper provides a 1-minute warning and then indicates when time is up. At that point, participants must stop immediately.
@@ -497,8 +497,8 @@ const FinanceChallenge = () => {
                     <FileText className="text-accent" size={20} />
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-semibold text-sm md:text-lg mb-0.5 md:mb-1">Round 2 Judging Instructions & Rating Sheet</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">View the official judging criteria and rating sheet for the portfolio presentation round</p>
+                    <h3 className="font-semibold text-sm md:text-lg mb-0.5 md:mb-1">Round 2 Rubric</h3>
+                    <p className="text-xs md:text-sm text-muted-foreground">View the official rating sheet for the portfolio presentation round</p>
                   </div>
                 </div>
             <Button
@@ -507,7 +507,7 @@ const FinanceChallenge = () => {
               className="w-full gap-2 text-sm border-accent/30 hover:bg-accent/10"
             >
               <a
-                href={`${import.meta.env.BASE_URL}documents/Stock_Market_Judging.pdf`}
+                href={`${import.meta.env.BASE_URL}documents/Stock_Market_Rubric.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

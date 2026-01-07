@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Calendar } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 
 const Footer = ({ className = "", style = {} }: { className?: string; style?: React.CSSProperties }) => {
   return (
@@ -32,6 +32,17 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
               <li className="flex items-center gap-2">
                 <MapPin size={14} className="md:w-4 md:h-4" />
                 <span>Palatine, Illinois</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Instagram size={14} className="md:w-4 md:h-4" />
+                <a 
+                  href="https://www.instagram.com/launch211official/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  @launch211official
+                </a>
               </li>
             </ul>
           </div>
