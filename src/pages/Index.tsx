@@ -13,13 +13,33 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main>
-        <HeroSection />
-        <DateLocationBar />
-        <EventsSection />
-        <AgendaSectionNew />
-        <PrizesSection />
-        <SponsorsSection />
-        <FAQSection />
+        <section id="hero">
+          <HeroSection />
+        </section>
+
+        <section id="date-location">
+          <DateLocationBar />
+        </section>
+
+        <section id="events">
+          <EventsSection />
+        </section>
+
+        <section id="agenda">
+          <AgendaSectionNew />
+        </section>
+
+        <section id="prizes">
+          <PrizesSection />
+        </section>
+
+        <section id="sponsors">
+          <SponsorsSection />
+        </section>
+
+        <section id="faq">
+          <FAQSection />
+        </section>
       </main>
       <Footer />
     </div>
