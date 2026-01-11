@@ -388,8 +388,8 @@ const PitchCompetition = () => {
                     <FileText className="text-accent" size={20} />
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-semibold text-sm md:text-lg mb-0.5 md:mb-1">Round 2 Rubric</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">View the official rating sheet for the portfolio presentation round</p>
+                    <h3 className="font-semibold text-sm md:text-lg mb-0.5 md:mb-1">Presentation Rubric</h3>
+                    <p className="text-xs md:text-sm text-muted-foreground">View the official rating sheet for the pitch</p>
                   </div>
                 </div>
             <Button
