@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
+import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 const About = () => {
   const founders = [
@@ -18,8 +20,56 @@ const About = () => {
     },
   ];
 
+  // Add structured data for both founders
+  useEffect(() => {
+    const scripts = founders.map((founder) => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": founder.name,
+        "jobTitle": founder.title,
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Launch 211"
+        },
+        "description": founder.bio,
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Palatine High School"
+        }
+      });
+      document.head.appendChild(script);
+      return script;
+    });
+
+    return () => {
+      scripts.forEach(script => document.head.removeChild(script));
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About Launch 211 - Sohum Gorladku & Raj Kamepalli | Founders</title>
+        <meta name="description" content="Meet the founders of Launch 211: Sohum Gorladku and Raj Kamepalli, Palatine High School students who created District 211's premier business competition. Learn about their mission to empower student entrepreneurs." />
+        <meta name="keywords" content="Sohum Gorladku, Raj Kamepalli, Launch 211 founders, Palatine High School, FBLA, student entrepreneurs, District 211, business competition founders, HOSA" />
+        <link rel="canonical" href="https://www.launch211.org/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="About Launch 211 - Sohum Gorladku & Raj Kamepalli" />
+        <meta property="og:description" content="Meet the founders of Launch 211: Sohum Gorladku and Raj Kamepalli, Palatine High School students empowering the next generation of business leaders." />
+        <meta property="og:url" content="https://www.launch211.org/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.launch211.org/thumbnail.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="About Launch 211 - Sohum Gorladku & Raj Kamepalli" />
+        <meta property="twitter:description" content="Meet the founders of Launch 211: Sohum Gorladku and Raj Kamepalli, Palatine High School students." />
+      </Helmet>
+
       <Navbar />
       <main>
         {/* Header */}
@@ -76,7 +126,7 @@ const About = () => {
               <div className="text-center mb-6 md:mb-16 space-y-2 md:space-y-4">
                 <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Meet Our Founders</h2>
                 <p className="text-xs sm:text-sm md:text-xl text-muted-foreground px-2">
-                  The visionaries behind Launch 211
+                  Sohum Gorladku and Raj Kamepalli - The visionaries behind Launch 211
                 </p>
               </div>
 
@@ -91,7 +141,7 @@ const About = () => {
                         <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-40 md:h-40 rounded-full overflow-hidden bg-secondary/50">
                           <img
                             src={founder.image}
-                            alt={founder.name}
+                            alt={`${founder.name} - ${founder.title} at Launch 211`}
                             className="w-full h-full object-cover"
                           />
                         </div>

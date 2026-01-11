@@ -8,18 +8,19 @@ import { Link } from "react-router-dom";
 const Registration = () => {
   const schools = [
     { name: "Palatine High School", district: "D211" },
-    { name: "Fremd High School", district: "D211" },
-    { name: "Conant High School", district: "D211" },
+    { name: "William Fremd High School", district: "D211" },
+    { name: "James B. Conant High School", district: "D211" },
     { name: "Hoffman Estates High School", district: "D211" },
     { name: "Schaumburg High School", district: "D211" },
     { name: "Buffalo Grove High School", district: "D214" },
-    { name: "Hersey High School", district: "D214" },
+    { name: "John Hersey High School", district: "D214" },
     { name: "Prospect High School", district: "D214" },
     { name: "Wheeling High School", district: "D214" },
     { name: "Rolling Meadows High School", district: "D214" },
-    { name: "Lake Zurich High School", district: "CUSD95" },
+    { name: "Elk Grove High School", district: "D214" },
+    { name: "Lake Zurich Community High School", district: "CUSD95" },
     { name: "Barrington High School", district: "CUSD220" },
-    { name: "Stevenson High School", district: "D125" },
+    { name: "Adlai E. Stevenson High School", district: "D125" },
   ];
 
   return (
