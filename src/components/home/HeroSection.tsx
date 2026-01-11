@@ -32,11 +32,11 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </Button>
             </Link>
-            <a href="/#agenda">
+            <Link to="/#agenda">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all hover:scale-105">
                 View Schedule
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
