@@ -3,19 +3,21 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import sohumPfp from "@/assets/sohumpfp.jpg";
+import rajPfp from "@/assets/rajpfp.jpg";
 
 const About = () => {
   const founders = [
     {
       name: "Sohum Gorladku",
       title: "Co-Founder & Operations Lead",
-      image: "/placeholder.svg",
+      image: sohumPfp,
       bio: "Sohum Gorladku is a student at Palatine High School and co-founder of Launch 211. He is passionate about helping students explore business, entrepreneurship, and leadership opportunities. As an executive leader of FBLA, Sohum has led initiatives to grow membership, organize competitions, and mentor students in business and finance. He co-founded Launch 211 to provide students across the district with hands-on business competitions, mentorship, and workshops that develop real-world skills. In his free time, he enjoys writing and conducting independent research on business and finance topics, as well as running cross country.",
     },
     {
       name: "Raj Kamepalli",
       title: "Co-Founder & Financial Lead",
-      image: "/placeholder.svg",
+      image: rajPfp,
       bio: "Raj Kamepalli is a student at Palatine High School and co-founder of Launch 211. A strong competitor in clubs like FBLA and HOSA, Raj brings experience in finance and a passion for helping students gain hands-on exposure to business and entrepreneurship. He co-founded Launch 211 to create opportunities for students to apply their skills in real-world business challenges and connect with mentors and peers across the district. In his free time, he enjoys exploring advanced topics in finance and economics, as well as playing lacrosse.",
     },
   ];
@@ -55,12 +57,12 @@ const About = () => {
         <title>About Launch 211 - Sohum Gorladku & Raj Kamepalli | Founders</title>
         <meta name="description" content="Meet the founders of Launch 211: Sohum Gorladku and Raj Kamepalli, Palatine High School students who created District 211's premier business competition. Learn about their mission to empower student entrepreneurs." />
         <meta name="keywords" content="Sohum Gorladku, Raj Kamepalli, Launch 211 founders, Palatine High School, FBLA, student entrepreneurs, District 211, business competition founders, HOSA" />
-        <link rel="canonical" href="https://www.launch211.org/about" />
+        <link rel="canonical" href="https://www.launch211.org/#/about" />
         
         {/* Open Graph */}
         <meta property="og:title" content="About Launch 211 - Sohum Gorladku & Raj Kamepalli" />
         <meta property="og:description" content="Meet the founders of Launch 211: Sohum Gorladku and Raj Kamepalli, Palatine High School students empowering the next generation of business leaders." />
-        <meta property="og:url" content="https://www.launch211.org/about" />
+        <meta property="og:url" content="https://www.launch211.org/#/about" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.launch211.org/thumbnail.png" />
 
@@ -98,7 +100,7 @@ const About = () => {
                     complex business challenges when given the right environment, mentorship, and opportunities.
                   </p>
                   <p>
-                    Our event brings together students, educators, and industry professionals to create 
+                    The Business Summit brings together students, educators, and industry professionals to create 
                     a dynamic learning environment where students can test their skills, learn from experts, 
                     and compete for recognition and prizes. Through our competitions and workshops, we aim to:
                   </p>

@@ -20,10 +20,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in">
           <h1 className="text-4xl md:text-7xl font-bold text-primary-foreground leading-tight">
-            Launch 211
+            Launch 211 <br></br> Business Summit
           </h1>
           <p className="text-lg md:text-2xl text-primary-foreground/90 leading-relaxed">
-            District 211's Premier Business Competition & Mentorship Event for High School Students
+            Premier Business Competition & Mentorship Event for High School Students in District 211 and beyond 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link to="/registration">
