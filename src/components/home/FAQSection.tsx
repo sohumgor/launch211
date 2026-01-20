@@ -10,7 +10,7 @@ const FAQSection = () => {
   const faqs = [
   {
       question: "Who is eligible to participate in Launch 211?",
-      answer: "Launch 211 is open to students from D211 (Palatine High School, Fremd High School, Conant High School, Hoffman Estates High School, Schaumburg High School), D214 (Buffalo Grove High School, Hersey High School, Prospect High School, Wheeling High School, Rolling Meadows High School, Elk Grove High School), Lake Zurich High School (CUSD95), Barrington High School (CUSD220), and Stevenson High School (D125). If your school is not listed but you're interested in participating, please contact us at launch211team@gmail.com."
+      answer: "Launch 211 is open to students from D211 (Palatine High School, Fremd High School, Conant High School, Hoffman Estates High School, Schaumburg High School), D214 (Buffalo Grove High School, Hersey High School, Prospect High School, Wheeling High School, Rolling Meadows High School, Elk Grove High School), Barrington High School (CUSD220), and Stevenson High School (D125). If your school is not listed but you're interested in participating, please contact us at launch211team@gmail.com."
   },
   {
       question: "How do I register for Launch 211?",

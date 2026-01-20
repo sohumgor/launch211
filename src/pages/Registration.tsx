@@ -18,7 +18,6 @@ const Registration = () => {
     { name: "Wheeling High School", district: "D214" },
     { name: "Rolling Meadows High School", district: "D214" },
     { name: "Elk Grove High School", district: "D214" },
-    { name: "Lake Zurich Community High School", district: "CUSD95" },
     { name: "Barrington High School", district: "CUSD220" },
     { name: "Adlai E. Stevenson High School", district: "D125" },
   ];
