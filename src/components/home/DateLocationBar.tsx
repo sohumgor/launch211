@@ -9,7 +9,7 @@ const DateLocationBar = () => {
             <Calendar size={20} className="md:w-7 md:h-7" />
             <div>
               <div className="text-xs md:text-sm opacity-90">Date</div>
-              <div className="text-sm md:text-xl font-bold">April 4, 2026</div>
+              <div className="text-sm md:text-xl font-bold">April 25, 2026</div>
             </div>
           </div>
           <div className="w-px h-10 md:h-12 bg-border" />
