@@ -12,7 +12,7 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
               LaunchPoint
             </h3>
             <p className="text-xs md:text-sm text-muted-foreground">
-              A premier business competition and networking event for high school students in District 211 and beyond.
+              A premier entrepreneurship competition for high school students in District 211 and beyond.
             </p>
           </div>
 
@@ -36,12 +36,12 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
               <li className="flex items-center gap-2">
                 <Instagram size={14} className="md:w-4 md:h-4" />
                 <a 
-                  href="https://www.instagram.com/launch211official/"
+                  href="https://www.instagram.com/launch_point_official/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  @launch211official
+                  @launch_point_official
                 </a>
               </li>
             </ul>

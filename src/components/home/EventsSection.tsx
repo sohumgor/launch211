@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
+import logo from "@/assets/launchpoint_logo.png";
+import chamberLogo from "@/assets/palatine_chamber_logo.png";
 import { 
   Rocket,
   GraduationCap,
@@ -18,6 +20,13 @@ const EventsSection = () => {
       isLink: true,
     },
     {
+      title: "Network & Continuation",
+      description: "Opportunties for post-event mentorship, advisory, and even investment for winning teams.",
+      icon: <Handshake className="w-5 h-5 md:w-6 md:h-6" />,
+      path: null,
+      isLink: false,
+    },
+    {
       title: "D211 Business Incubator Aligned",
       description: "Competition structure aligns with and goes beyond the Business Incubator program curriculum.",
       icon: <GraduationCap className="w-5 h-5 md:w-6 md:h-6" />,
@@ -26,22 +35,17 @@ const EventsSection = () => {
     },
     {
       title: "UIUC iVenture Aligned",
-      description: "Materials and rubrics reviewed by the iVenture Accelerator team at the University of Illinois Urbana-Champaign, to ensure alignment with real-world venture capital investment.",
+      description: "Reviewed by the iVenture Accelerator team at the University of Illinois Urbana-Champaign, ensuring real venture capital alignment.",
       icon: <Building2 className="w-5 h-5 md:w-6 md:h-6" />,
-      path: null,
-      isLink: false,
-    },
-    {
-      title: "Network & Continuation Opporuntites",
-      description: "Opporutnties for post-event mentorship, advisory, and even investment for winning teams. Facilitated by partnerships with business professionals, investors, financial advisors, etc.",
-      icon: <Handshake className="w-5 h-5 md:w-6 md:h-6" />,
       path: null,
       isLink: false,
     }
   ];
 
   return (
+    
     <section className="py-20" style={{ background: 'var(--gradient-section-3)' }}>
+      
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4">
