@@ -88,7 +88,7 @@ const Registration = () => {
               <div className="bg-accent/5 p-3 md:p-4 rounded-lg border border-accent/10">
                 <h4 className="font-semibold text-xs md:text-sm mb-1.5 md:mb-2">Registration will require:</h4>
                 <ul className="text-[11px] md:text-sm text-muted-foreground space-y-0.5 md:space-y-1">
-                  <li>• Team member names (2–4 students)</li>
+                  <li>• Team member names (2–5 students)</li>
                   <li>• School affiliation</li>
                   <li>• Adult supervisor contact information</li>
                 </ul>
