@@ -419,7 +419,7 @@ const PitchCompetition = () => {
                 </div>
                 <Button asChild className="w-full gap-2 text-sm">
                   <a
-                    href={`${import.meta.env.BASE_URL}documents/Venture_Pitch_Guide.pdf`}
+                    href={`${import.meta.env.BASE_URL}documents/Venture_Pitch.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
