@@ -9,10 +9,10 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
           {/* About */}
           <div className="space-y-2 md:space-y-4">
             <h3 className="text-base md:text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Launch 211
+              LaunchPoint
             </h3>
             <p className="text-xs md:text-sm text-muted-foreground">
-              A premier business competition and workshop event for high school students in District 211 and beyond.
+              A premier business competition and networking event for high school students in District 211 and beyond.
             </p>
           </div>
 

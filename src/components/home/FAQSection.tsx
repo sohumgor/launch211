@@ -8,43 +8,43 @@ import { Mail } from "lucide-react";
 
 const FAQSection = () => {
   const faqs = [
-  {
-      question: "Who is eligible to participate in Launch 211?",
-      answer: "Launch 211 is open to students from D211 (Palatine High School, Fremd High School, Conant High School, Hoffman Estates High School, Schaumburg High School), D214 (Buffalo Grove High School, Hersey High School, Prospect High School, Wheeling High School, Rolling Meadows High School, Elk Grove High School), Barrington High School (CUSD220), and Stevenson High School (D125). If your school is not listed but you're interested in participating, please contact us at launch211team@gmail.com."
-  },
-  {
-      question: "How do I register for Launch 211?",
-      answer: "Students cannot register directly. Registration is handled through your school's business department head or designated Launch 211 sponsor. Contact them to register individually or as a team for competitions, or to attend the Career & Mentorship Panel."
-  },
-  {
-    question: "Can I participate in multiple competitions?",
-    answer: "Due to scheduling, most competitions run concurrently. Participants can compete in one main competition and attend the Career & Mentorship Panel. Check the schedule for exact timings."
-  },
-  {
-      question: "Can I attend just the Career & Mentorship Panel without competing?",
-      answer: "Yes! If you'd like to attend only the Career & Mentorship Panel without competing, speak with your business department head or Launch 211 sponsor about this option. They can register you for panel attendance only."
-  },
-  {
-    question: "What should I bring to the event?",
-    answer: "Bring a valid student ID, any materials needed for your competition (laptop, presentation materials, etc.), and enthusiasm! Detailed requirements for each competition will be sent to registered participants."
-  },
-  {
-      question: "How will transportation work?",
-      answer: "Transportation will be provided for all participants. Students will travel by bus from their school to Palatine High School, accompanied by their school's designated Launch 211 sponsor(s). Buses will arrive at Palatine High School at 7:30 AM. Your school's Launch 211 sponsor will communicate specific departure times from your school closer to the event date."
-  },
-  {
-    question: "Will lunch be provided?",
-    answer: "Yes! Lunch will be served between 11:00 AM and 1:00 PM. Participants can stop by at any time during that window."
-  },
-  {
-    question: "What prizes are awarded?",
-    answer: "Top 3 finishers in each competition will receive prizes in the form of gift cards, as well as medals to recognize their achievements."
-  },
-  {
-    question: "Is there a registration fee?",
-    answer: "Launch 211 is free to attend thanks to our generous sponsors. However, registration is required to manage capacity and ensure the best experience for all participants."
-  }
-];
+    {
+      question: "Who can participate in LaunchPoint?",
+      answer: "LaunchPoint is open to all high school students in the community, with a focus on District 211. You do not need to be a member of any specific club, enrolled in an incubator program, or have prior competition experience. If you're a high school student with a business idea, you're welcome to compete.",
+    },
+    {
+      question: "How do I register?",
+      answer: "Registration will be available through our website once finalized. Teams register together with member names, school affiliation, and an adult supervisor contact. Registration will close 7 days before the event, and spots are capped based on judging capacity.",
+    },
+    {
+      question: "What is the team size?",
+      answer: "Teams consist of 2–4 students. Each team develops and presents one original business concept (product or service) to a panel of judges.",
+    },
+    {
+      question: "How does the competition work?",
+      answer: "Each team delivers a 7–10 minute venture pitch followed by 3–5 minutes of Q&A from a panel of business professionals. Judges use a standardized, investor-style scoring rubric. Presentations run in 20-minute blocks across 2–4 simultaneous breakout rooms.",
+    },
+    {
+      question: "What are the prizes?",
+      answer: "1st Place: $1,000 · 2nd Place: $500 · 3rd Place: $250. Awards are structured as checks or scholarship-style funding intended to directly advance your business venture — not just general prize money. Winning teams also receive post-event opportunities including mentorship and office hours.",
+    },
+    {
+      question: "Is there a registration fee?",
+      answer: "LaunchPoint is free to attend thanks to our sponsors and our partnership with the Palatine Area Chamber of Commerce. Registration is required to manage capacity.",
+    },
+    {
+      question: "Where is the event held?",
+      answer: "The 2026 LaunchPoint Venture Pitch Summit will be held at Harper College's Wojcik Conference Center in Palatine, IL on April 25, 2026. The venue features an amphitheater for opening/awards and breakout rooms for judging sessions.",
+    },
+    {
+      question: "What happens after the competition?",
+      answer: "Beyond prizes, top-performing teams will receive post-event opportunities including office hours with local business owners and investors, structured feedback sessions, connections to Chamber member mentors, and potential early-stage advisory support. The goal is venture continuation — not just a one-day event.",
+    },
+    { 
+      question: "Will lunch be provided?",
+      answer: "Yes! A full catered lunch program will be offered to all participants from 11:30 AM - 12:30 PM.",
+    }
+  ];
 
   return (
     <section className="py-20" style={{ background: 'var(--gradient-section-3)' }}>
@@ -90,3 +90,4 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
+

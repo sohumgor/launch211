@@ -18,12 +18,12 @@ const DateLocationBar = () => {
             <div>
               <div className="text-xs md:text-sm opacity-90">Location</div>
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=1111+N+Rohlwing+Rd,+Palatine,+IL+60074"
+                href="https://maps.app.goo.gl/XaDEuoin9vmaLH3u8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm md:text-xl font-bold hover:text-primary transition-colors underline decoration-dotted underline-offset-4"
               >
-                Palatine High School
+                Harper College, IL
               </a>
             </div>
           </div>
