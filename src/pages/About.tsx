@@ -12,13 +12,13 @@ const About = () => {
       name: "Sohum Gorladku",
       title: "Co-Founder & Operations Lead",
       image: sohumPfp,
-      bio: "Sohum Gorladku is a student at Palatine High School and co-founder of LaunchPoint. He is passionate about helping students explore business, entrepreneurship, and leadership opportunities. As an executive leader of FBLA, Sohum has led initiatives to grow membership, organize competitions, and mentor students in business and finance. He co-founded Launch 211 to provide students across the district with hands-on business competitions, mentorship, and workshops that develop real-world skills. In his free time, he enjoys writing and conducting independent research on business and finance topics, as well as running cross country.",
+      bio: "Sohum Gorladku is a student at Palatine High School and co-founder of LaunchPoint. He is passionate about helping students explore business, entrepreneurship, and leadership opportunities. As an executive leader of FBLA, Sohum has led initiatives to grow membership, organize competitions, and mentor students in business and finance. He co-founded LaunchPoint to provide students across the district with hands-on business competitions, mentorship, and workshops that develop real-world skills. In his free time, he enjoys writing and conducting independent research on business and finance topics, as well as running cross country.",
     },
     {
       name: "Raj Kamepalli",
       title: "Co-Founder & Financial Lead",
       image: rajPfp,
-      bio: "Raj Kamepalli is a student at Palatine High School and co-founder of LaunchPoint. A strong competitor in clubs like FBLA and HOSA, Raj brings experience in finance and a passion for helping students gain hands-on exposure to business and entrepreneurship. He co-founded Launch 211 to create opportunities for students to apply their skills in real-world business challenges and connect with mentors and peers across the district. In his free time, he enjoys exploring advanced topics in finance and economics, as well as playing lacrosse.",
+      bio: "Raj Kamepalli is a student at Palatine High School and co-founder of LaunchPoint. A strong competitor in clubs like FBLA and HOSA, Raj brings experience in finance and a passion for helping students gain hands-on exposure to business and entrepreneurship. He co-founded LaunchPoint to create opportunities for students to apply their skills in real-world business challenges and connect with mentors and peers across the district. In his free time, he enjoys exploring advanced topics in finance and economics, as well as playing lacrosse.",
     },
   ];
   
