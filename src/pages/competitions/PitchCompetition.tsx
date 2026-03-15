@@ -187,29 +187,48 @@ const PitchCompetition = () => {
             </Card>
 
             {/* Post-Event Opportunities */}
-            <Card className="p-4 md:p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-accent/20 shadow-md">
-              <h2 className="text-base md:text-2xl font-bold mb-2 md:mb-4 text-primary flex items-center gap-2">
-                <Handshake size={20} className="md:w-6 md:h-6" />
-                Post-Event Opportunities
-              </h2>
-              <p className="text-xs md:text-base text-muted-foreground mb-3 md:mb-4">
-                The long-term goal is not just competition — it's cultivating sustainable, student-led ventures that may develop into real local businesses. Top-performing teams will receive:
-              </p>
-              <ul className="space-y-2 md:space-y-3 text-xs md:text-base text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={16} />
-                  <span><strong className="text-foreground">Office Hours & Structured Feedback Sessions</strong> with local business owners, investors, and potential venture firms</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={16} />
-                  <span><strong className="text-foreground">Mentorship & Advisory Support</strong> from business leaders, financial advsiors, venture capital investors, and community mentors</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={16} />
-                  <span><strong className="text-foreground">Venture Continuation Funding</strong> — prize money structured to directly advance your pitched business with additional potential funding</span>
-                </li>
-              </ul>
-            </Card>
+            <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-accent/20 shadow-lg">
+            
+            <h2 className="text-xl md:text-2xl font-bold mb-4 text-primary flex items-center gap-2">
+              <Handshake className="w-5 h-5 md:w-6 md:h-6" />
+              Post-Event Opportunities
+            </h2>
+
+            <p className="text-sm md:text-base text-muted-foreground mb-5">
+              The long-term goal is not just competition — it's cultivating student educational and business ventures, representing an investment in the local community. Top-performing teams will receive:
+            </p>
+
+            <ul className="space-y-3 text-sm md:text-base text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <span>
+                  <strong className="text-foreground">Office Hours</strong> with local business owners and professionals
+                </span>
+              </li>
+
+              <li className="flex items-start gap-2">
+                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <span>
+                  <strong className="text-foreground">Career-focused</strong> mentorship from local business leaders
+                </span>
+              </li>
+
+              <li className="flex items-start gap-2">
+                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <span>
+                  <strong className="text-foreground">Structured feedback</strong> to sharpen skills, direction, and career vision
+                </span>
+              </li>
+
+              <li className="flex items-start gap-2">
+                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <span>
+                  <strong className="text-foreground">Potential Early-Stage Advisory</strong> and investment pathways for the most promising ventures
+                </span>
+              </li>
+            </ul>
+
+          </Card>
 
             {/* Event Overview */}
             <Card className="p-4 md:p-8 bg-card border-accent/20 shadow-md">

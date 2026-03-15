@@ -90,13 +90,6 @@ const PrizesSection = () => {
                   <strong className="text-foreground">Potential Early-Stage Advisory</strong> and investment pathways for the most promising ventures
                 </span>
               </li>
-
-              <li className="flex items-start gap-2">
-                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
-                <span>
-                  <strong className="text-foreground">Venture Continuation Funding</strong> — prize money structured to directly advance your pitched business
-                </span>
-              </li>
             </ul>
 
           </Card>
