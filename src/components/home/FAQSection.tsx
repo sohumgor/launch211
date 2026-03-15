@@ -18,11 +18,11 @@ const FAQSection = () => {
     },
     {
       question: "What is the team size?",
-      answer: "Teams consist of 2–4 students. Each team develops and presents one original business concept (product or service) to a panel of judges.",
+      answer: "Teams consist of 2–5 students. Each team develops and presents one original business concept (product or service) to a panel of judges.",
     },
     {
       question: "How does the competition work?",
-      answer: "Each team delivers a 7–10 minute venture pitch followed by 3–5 minutes of Q&A from a panel of business professionals. Judges use a standardized, investor-style scoring rubric. Presentations run in 20-minute blocks across 2–4 simultaneous breakout rooms.",
+      answer: "Each team delivers a 7 minute venture pitch followed by 3 minutes of Q&A from a panel of business professionals. Judges use a standardized, investor-style scoring rubric. Presentations run in 20-minute blocks across 2–4 simultaneous breakout rooms.",
     },
     {
       question: "What are the prizes?",

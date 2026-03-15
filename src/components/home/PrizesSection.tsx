@@ -36,16 +36,16 @@ const PrizesSection = () => {
 
           <div className="my-8">
             <div className="text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              $TBD
+              $2,000
             </div>
           </div>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Cash prizes awarded across all four competition categories
+            Scholarship-style awards directly fund educational and business ventures
           </p>
 
           <p className="text-lg text-muted-foreground">
-            Each competition offers 1st, 2nd, and 3rd place prizes. Visit individual competition pages for prize breakdowns.
+            Prize awarded to top 3 teams based on judging framework mimicking venture capital norms.
           </p>
         </div>
 
@@ -59,28 +59,28 @@ const PrizesSection = () => {
             </h2>
 
             <p className="text-sm md:text-base text-muted-foreground mb-5">
-              The long-term goal is not just competition — it's cultivating sustainable, student-led ventures that may develop into real local businesses. Top-performing teams will receive:
+              The long-term goal is not just competition — it's cultivating student educational and business ventures, representing an investment in the local community. Top-performing teams will receive:
             </p>
 
             <ul className="space-y-3 text-sm md:text-base text-muted-foreground">
               <li className="flex items-start gap-2">
                 <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
                 <span>
-                  <strong className="text-foreground">Office Hours</strong> with local business owners, investors, and potential venture firms
+                  <strong className="text-foreground">Office Hours</strong> with local business owners and professionals
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
                 <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
                 <span>
-                  <strong className="text-foreground">Structured Feedback Sessions</strong> with detailed judge commentary on your pitch
+                  <strong className="text-foreground">Career-focused</strong> mentorship from local business leaders
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
                 <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
                 <span>
-                  <strong className="text-foreground">Mentorship & Advisory Support</strong> from Palatine Area Chamber of Commerce member mentors
+                  <strong className="text-foreground">Structured feedback</strong> to sharpen skills, direction, and career vision
                 </span>
               </li>
 

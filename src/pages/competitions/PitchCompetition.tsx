@@ -19,12 +19,19 @@ const PitchCompetition = () => {
 
   const pitchDeckSections = [
     {
-      title: "Company Purpose & Problem",
+      title: "Company Purpose",
       points: [
         "What is your company and what does it do? (One clear sentence)",
         "What specific customer pain are you addressing?",
-        "Why are current solutions inadequate?",
-        "What evidence do you have that this problem is urgent and important?"
+        "Why are current solutions inadequate?"
+      ]
+    },
+    {
+      title: "Problem",
+      points: [
+        "What specific pain or frustration does your target customer experience?",
+        "What solutions exist today — and why do they fall short?",
+        "What evidence do you have that this problem is real and urgent?"
       ]
     },
     {
@@ -33,20 +40,29 @@ const PitchCompetition = () => {
         "How does your solution solve the customer's problem?",
         "What specific benefits does your solution provide?",
         "How does your solution make the customer's life meaningfully better?",
-        "What makes your approach different or superior?"
+        "What makes your approach different or better than what exists?"
       ]
     },
     {
-      title: "Market Opportunity & Timing",
+      title: "Why Now?",
+      points: [
+        "What has changed recently — in technology, behavior, regulation, or culture — that makes this the right moment?",
+        "Why couldn't this have worked 5 years ago, or why is it more urgent today?",
+        "What trends are enabling or accelerating the need for your solution?"
+      ]
+    },
+    {
+      title: "Market Size & Customer Validation",
       points: [
         "What is your market size? (TAM, SAM, SOM with clear calculations)",
         "Who is your beachhead segment and why did you choose them?",
         "Who are your early adopters and what evidence shows they'll pay?",
-        "Why is NOW the right time for this solution?"
+        "How large is the overall market — and what realistic slice can you capture first?",
+        "Who specifically are your first target customers?"
       ]
     },
     {
-      title: "Competitive Positioning",
+      title: "Competitive Understanding & Positioning",
       points: [
         "Who are your main competitors (direct and indirect)?",
         "How do you differentiate from existing solutions?",
@@ -57,19 +73,10 @@ const PitchCompetition = () => {
     {
       title: "Business Model & Go-to-Market",
       points: [
-        "How will you make money?",
-        "What is your revenue model and pricing strategy?",
-        "How will you reach and acquire your first customers?",
-        "Who specifically are your target early adopters?"
-      ]
-    },
-    {
-      title: "Team Preparation & Insights",
-      points: [
-        "How did your team research and validate this opportunity?",
-        "What assumptions did you test and what did you learn?",
-        "What are the biggest risks and how will you address them?",
-        "What would you do differently or what remains to be validated?"
+        "How does the business charge customers? (subscription, one-time purchase, service fee, etc.)",
+        "Why does that pricing model make sense for this product and customer?",
+        "What is your specific plan to reach first customers — name the channels partners, or outreach tactics.",
+        "Walk through the actual steps from zero to first sale."
       ]
     }
   ];
@@ -266,22 +273,22 @@ const PitchCompetition = () => {
                     Preparation Phase
                   </h3>
                   <p className="text-muted-foreground ml-5 md:ml-7 text-[10px] md:text-base">
-                    Teams have all time prior to the in-person competition date to craft their pitch and presentation. Teams register through their teachers/coordinators. Either one company or one product is pitched.
+                    Teams have all time prior to the in-person competition date to craft their pitch and presentation. Teams have access to all resources during the pitch including devices, notes, visuals, slides, props (optional).
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-xs md:text-lg mb-1 md:mb-2 flex items-center gap-2">
                     <Target className="text-accent" size={16} />
-                    Presentation (7-10 minutes)
+                    Presentation (7 minutes)
                   </h3>
                   <p className="text-muted-foreground ml-5 md:ml-7 text-[10px] md:text-base">
-                    The team delivers their investment strategy analysis, portfolio rationale, and key insights. The timekeeper provides a 1-minute warning and then indicates when time is up. At that point, participants must stop immediately.
+                    The team delivers their pitch covering all required sections. The timekeeper provides a 1-minute warning and then indicates when time is up. At that point, participants must stop immediately.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-xs md:text-lg mb-1 md:mb-2 flex items-center gap-2">
                     <Target className="text-primary" size={16} />
-                    Question & Answer (3-5 minutes)
+                    Question & Answer (3 minutes)
                   </h3>
                   <p className="text-muted-foreground ml-5 md:ml-7 text-[10px] md:text-base">
                     The judge asks standard questions to determine understanding and probe critical thinking. For teams greater than 1, every team member must participate by responding to at least one question during this session.
@@ -299,7 +306,7 @@ const PitchCompetition = () => {
                 What to Include in Your Pitch
               </h2>
               <p className="text-xs md:text-base text-muted-foreground mb-4">
-                Your 7-10 minute presentation should address the evaluation criteria. Consider including these elements (all not required but recommended):
+                Your 7 minute presentation should address the evaluation criteria. Consider including these elements (all not required but recommended):
               </p>
               <div className="space-y-4 md:space-y-6">
                 {pitchDeckSections.map((section, index) => (
@@ -328,7 +335,11 @@ const PitchCompetition = () => {
                   <ul className="space-y-1 text-xs md:text-base text-muted-foreground ml-4">
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                      <span>Company Purpose & Problem Definition (10 pts)</span>
+                      <span>Company Purpose (10 pts)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      <span>Problem Defintion (10 pts)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
@@ -336,7 +347,7 @@ const PitchCompetition = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                      <span>Market Timing & Opportunity (10 pts)</span>
+                      <span>Why Now? (10 pts)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
@@ -349,10 +360,6 @@ const PitchCompetition = () => {
                     <li className="flex items-start gap-2">
                       <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
                       <span>Business Model & Go-to-Market Strategy (10 pts)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                      <span>Communication & Professional Presence (10 pts)</span>
                     </li>
                   </ul>
                 </div>
@@ -399,7 +406,7 @@ const PitchCompetition = () => {
               </div>
               <div className="mt-4 p-3 md:p-4 bg-accent/10 rounded-lg border border-accent/20">
                 <p className="text-xs md:text-sm text-muted-foreground">
-                  <strong className="text-accent">Tip:</strong> Practice your pitch until it feels natural and conversational, not memorized. Ensure all team members understand every aspect of the venture and can speak confidently.
+                  <strong className="text-accent">Tip: </strong>OPEN NOTE presentation, but practice your pitch until it feels natural and conversational, not memorized. Ensure all team members understand every aspect of the venture and can speak confidently.
                 </p>
               </div>
             </Card>
@@ -414,7 +421,7 @@ const PitchCompetition = () => {
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-semibold text-sm md:text-lg mb-0.5 md:mb-1">Complete Event Guide</h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">Download the full Stock Market Simulation guide with strategic tips, presentation requirements, and detailed evaluation criteria</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Download the full Venture Pitch Competition guide with strategic tips, presentation requirements, and detailed evaluation criteria</p>
                   </div>
                 </div>
                 <Button asChild className="w-full gap-2 text-sm">
