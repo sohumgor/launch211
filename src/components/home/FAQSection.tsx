@@ -34,7 +34,7 @@ const FAQSection = () => {
     },
     {
       question: "Where is the event held?",
-      answer: "The 2026 LaunchPoint Venture Pitch Summit will be held at Harper College's Wojcik Conference Center in Palatine, IL on April 25, 2026. The venue features an amphitheater for opening/awards and breakout rooms for judging sessions.",
+      answer: "TBD: The 2026 LaunchPoint Venture Pitch Summit will be held at Harper College or Palatine High School in Palatine, IL on April 25, 2026. The venue features an amphitheater for opening/awards and breakout rooms for judging sessions.",
     },
     {
       question: "What happens after the competition?",

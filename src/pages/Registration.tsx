@@ -33,12 +33,14 @@ const Registration = () => {
                 <p className="text-xs md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
                   We're finalizing our registration system. Once ready, the registration link will be posted here. Registration will close 7 days before the event.
                 </p>
+                <p><a href = "https://forms.gle/h2XLN4iWxxHHy2BE6">Fill out the interest form</a>
+                </p>
               </div>
 
               <div className="grid grid-cols-3 gap-2 md:gap-6 pt-4 md:pt-8">
                 <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-accent/20">
                   <Users className="mx-auto text-primary" size={20} />
-                  <h3 className="font-semibold text-primary text-[10px] md:text-base">Teams of 2–4</h3>
+                  <h3 className="font-semibold text-primary text-[10px] md:text-base">Teams of 2–5</h3>
                   <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
                     Form a team and develop your venture pitch together
                   </p>
@@ -54,7 +56,7 @@ const Registration = () => {
                   <Calendar className="mx-auto text-primary" size={20} />
                   <h3 className="font-semibold text-primary text-[10px] md:text-base">April 25, 2026</h3>
                   <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
-                    Half-day event at Harper College Conference Center
+                    Half-day event
                   </p>
                 </div>
               </div>
@@ -64,7 +66,7 @@ const Registration = () => {
                 <ul className="space-y-1.5 md:space-y-2 text-muted-foreground text-xs md:text-base">
                   <li className="flex items-start gap-1.5 md:gap-2">
                     <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Free admission for all registered teams — open to all high school students</span>
+                    <span>Open to all high school students</span>
                   </li>
                   <li className="flex items-start gap-1.5 md:gap-2">
                     <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />

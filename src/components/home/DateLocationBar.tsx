@@ -23,7 +23,7 @@ const DateLocationBar = () => {
                 rel="noopener noreferrer"
                 className="text-sm md:text-xl font-bold hover:text-primary transition-colors underline decoration-dotted underline-offset-4"
               >
-                Harper College, IL
+                TBD: Palatine, IL
               </a>
             </div>
           </div>
