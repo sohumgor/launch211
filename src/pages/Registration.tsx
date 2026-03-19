@@ -33,9 +33,23 @@ const Registration = () => {
                 <p className="text-xs md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
                   We're finalizing our registration system. Once ready, the registration link will be posted here. Registration will close 7 days before the event.
                 </p>
-                <p><a href = "https://forms.gle/h2XLN4iWxxHHy2BE6">Fill out the interest form</a>
-                </p>
+                <div className="pt-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-accent text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <a
+                    href="https://forms.gle/h2XLN4iWxxHHy2BE6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Fill Out Interest Form →
+                  </a>
+                </Button>
               </div>
+
+            </div>
 
               <div className="grid grid-cols-3 gap-2 md:gap-6 pt-4 md:pt-8">
                 <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-accent/20">
