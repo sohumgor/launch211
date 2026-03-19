@@ -36,7 +36,7 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
               <li className="flex items-center gap-2">
                 <Instagram size={14} className="md:w-4 md:h-4" />
                 <a 
-                  href="https://www.instagram.com/launch_point_official/"
+                  href="https://www.instagram.com/official_launchpoint/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
