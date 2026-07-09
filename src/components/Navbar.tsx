@@ -21,9 +21,17 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/competitions/pitch" className="text-sm font-medium hover:text-primary transition-colors">
-              Competition
+              Venture Pitch
+            </Link>
+
+            <Link to="/competitions/roleplay" className="text-sm font-medium hover:text-primary transition-colors">
+              Business Roleplay
             </Link>
             
+            <Link to="/events/workshops" className="text-sm font-medium hover:text-primary transition-colors">
+              Workshops
+            </Link>
+
             <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
               About Us
             </Link>
@@ -53,9 +61,26 @@ const Navbar = () => {
               className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Competition
+              Venture Pitch
             </Link>
 
+
+            <Link
+              to="/competitions/roleplay"
+              className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Business Roleplay
+            </Link>
+
+            <Link
+              to="/events/workshops"
+              className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Workshops
+            </Link>
+            
             <Link
               to="/about"
               className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"

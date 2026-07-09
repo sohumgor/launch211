@@ -31,7 +31,7 @@ const Registration = () => {
                 </div>
                 <h2 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Registration Coming Soon</h2>
                 <p className="text-xs md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-                  We're finalizing our registration system. Once ready, the registration link will be posted here. Registration will close 7 days before the event.
+                  We're finalizing our registration system. Once ready, the registration link will be posted here. Registration will close 14 days before the event.
                 </p>
                 <div className="pt-4">
                 <Button
@@ -54,21 +54,21 @@ const Registration = () => {
               <div className="grid grid-cols-3 gap-2 md:gap-6 pt-4 md:pt-8">
                 <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-accent/20">
                   <Users className="mx-auto text-primary" size={20} />
-                  <h3 className="font-semibold text-primary text-[10px] md:text-base">Teams of 2–5</h3>
+                  <h3 className="font-semibold text-primary text-[10px] md:text-base">Teams of 2–4</h3>
                   <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
-                    Form a team and develop your venture pitch together
+                    Form a team and register for a competition
                   </p>
                 </div>
                 <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/20">
                   <Trophy className="mx-auto text-accent" size={20} />
-                  <h3 className="font-semibold text-accent text-[10px] md:text-base">$1,750 Prize Pool</h3>
+                  <h3 className="font-semibold text-accent text-[10px] md:text-base">$2,000 Prize Pool</h3>
                   <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
-                    Plus post-event mentorship and venture continuation opportunities
+                    Compete for scholarship-style awards + post-event mentorship opportunities
                   </p>
                 </div>
                 <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-accent/20">
                   <Calendar className="mx-auto text-primary" size={20} />
-                  <h3 className="font-semibold text-primary text-[10px] md:text-base">April 25, 2026</h3>
+                  <h3 className="font-semibold text-primary text-[10px] md:text-base">October 17, 2026</h3>
                   <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
                     Half-day event
                   </p>
@@ -80,15 +80,15 @@ const Registration = () => {
                 <ul className="space-y-1.5 md:space-y-2 text-muted-foreground text-xs md:text-base">
                   <li className="flex items-start gap-1.5 md:gap-2">
                     <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Open to all high school students</span>
+                    <span>Open to all District 211 high school students</span>
                   </li>
                   <li className="flex items-start gap-1.5 md:gap-2">
                     <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Compete for venture continuation funding ($1,000 / $500 / $250)</span>
+                    <span>Compete for scholarship-style awards ($1,000 / $500 / $250)</span>
                   </li>
                   <li className="flex items-start gap-1.5 md:gap-2">
                     <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Present to panels of experienced business professionals</span>
+                    <span>Interact with experienced business professionals</span>
                   </li>
                   <li className="flex items-start gap-1.5 md:gap-2">
                     <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
@@ -96,7 +96,11 @@ const Registration = () => {
                   </li>
                   <li className="flex items-start gap-1.5 md:gap-2">
                     <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Catering provided — lunch or snacks depending on schedule</span>
+                    <span>Choose workshop in your area of interest</span>
+                  </li>
+                  <li className="flex items-start gap-1.5 md:gap-2">
+                    <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
+                    <span>Catering lunch provided</span>
                   </li>
                 </ul>
               </div>
@@ -104,9 +108,9 @@ const Registration = () => {
               <div className="bg-accent/5 p-3 md:p-4 rounded-lg border border-accent/10">
                 <h4 className="font-semibold text-xs md:text-sm mb-1.5 md:mb-2">Registration will require:</h4>
                 <ul className="text-[11px] md:text-sm text-muted-foreground space-y-0.5 md:space-y-1">
-                  <li>• Team member names (2–5 students)</li>
-                  <li>• Adult faculty contact information</li>
-                  <li>• Registration fee covering catered lunch TBD</li>
+                  <li>• Team member names (2–4 students)</li>
+                  <li>• Registration fee ($15 per student) covers catered lunch</li>
+                  <li>• Choose competitive vent and workshop of interest</li>
                 </ul>
               </div>
 

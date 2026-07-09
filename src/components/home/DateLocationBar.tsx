@@ -9,7 +9,7 @@ const DateLocationBar = () => {
             <Calendar size={20} className="md:w-7 md:h-7" />
             <div>
               <div className="text-xs md:text-sm opacity-90">Date</div>
-              <div className="text-sm md:text-xl font-bold">April 25, 2026</div>
+              <div className="text-sm md:text-xl font-bold">October 17, 2026</div>
             </div>
           </div>
           <div className="w-px h-10 md:h-12 bg-border" />
@@ -23,7 +23,7 @@ const DateLocationBar = () => {
                 rel="noopener noreferrer"
                 className="text-sm md:text-xl font-bold hover:text-primary transition-colors underline decoration-dotted underline-offset-4"
               >
-                TBD: Palatine, IL
+                Palatine High School, IL
               </a>
             </div>
           </div>

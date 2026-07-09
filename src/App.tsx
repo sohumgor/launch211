@@ -12,7 +12,9 @@ import MarketingChallenge from "./pages/competitions/MarketingChallenge";
 import EthicsCompetition from "./pages/competitions/EthicsCompetition";
 import FinanceChallenge from "./pages/competitions/FinanceChallenge";
 import PitchCompetition from "./pages/competitions/PitchCompetition";
+import BusinessRoleplayCompetition from "./pages/competitions/BusinessRoleplayCompetition.tsx";
 import CareerPanel from "./pages/events/CareerPanel";
+import Workshops from "./pages/events/Workshops";
 
 const queryClient = new QueryClient();
 
@@ -50,8 +52,10 @@ const App = () => (
           <Route path="/competitions/ethics" element={<EthicsCompetition />} />
           <Route path="/competitions/investing" element={<FinanceChallenge />} />
           <Route path="/competitions/pitch" element={<PitchCompetition />} />
+          <Route path="/competitions/roleplay" element={<BusinessRoleplayCompetition />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="/events/career-panel" element={<CareerPanel />} />
+          <Route path="/events/workshops" element={<Workshops />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

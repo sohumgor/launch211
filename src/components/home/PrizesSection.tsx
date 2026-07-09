@@ -1,97 +1,108 @@
 import { Card } from "@/components/ui/card";
-import { Trophy, Medal, Award, Handshake, ArrowRight } from "lucide-react";
+import { Handshake, ArrowRight } from "lucide-react";
 
 const PrizesSection = () => {
-  const prizes = [
-    {
-      icon: Trophy,
-      place: "1st Place",
-      amount: "$1,000",
-      color: "from-yellow-400 to-yellow-600",
-      benefits: ["Cash Prize", "Winner Certificate", "Mentorship Opportunity"],
-    },
-    {
-      icon: Medal,
-      place: "2nd Place",
-      amount: "$500",
-      color: "from-gray-300 to-gray-400",
-      benefits: ["Cash Prize", "Runner-up Certificate", "Industry Connections"],
-    },
-    {
-      icon: Award,
-      place: "3rd Place",
-      amount: "$250",
-      color: "from-orange-400 to-orange-600",
-      benefits: ["Cash Prize", "Participant Certificate", "Networking Access"],
-    },
-  ];
-
   return (
-    <section className="py-20" style={{ background: "var(--gradient-section-3)" }}>
+    <section
+      className="py-20"
+      style={{ background: "var(--gradient-section-3)" }}
+    >
       <div className="container mx-auto px-4">
 
         {/* Prize Header */}
         <div className="text-center mb-16 space-y-4 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold">Total Prize Pool</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Total Prize Pool
+          </h2>
 
           <div className="my-8">
             <div className="text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              $2,000
+              $2,000+
             </div>
           </div>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Scholarship-style awards directly fund educational and business ventures
+            Over $2,000 in scholarship-style awards recognizing outstanding
+            performance across LaunchPoint's competitive events.
           </p>
 
           <p className="text-lg text-muted-foreground">
-            Prize awarded to top 3 teams based on judging framework mimicking venture capital norms.
+            Awards are presented to the top 3 teams in both the Venture
+            Pitch and Business Roleplay competitions.
           </p>
         </div>
 
-        {/* Post Event Opportunities Card */}
+        {/* Beyond the Competition */}
         <div className="max-w-4xl mx-auto">
           <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-accent/20 shadow-lg">
-            
+
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-primary flex items-center gap-2">
               <Handshake className="w-5 h-5 md:w-6 md:h-6" />
-              Post-Event Opportunities
+              Beyond the Competition
             </h2>
 
-            <p className="text-sm md:text-base text-muted-foreground mb-5">
-              The long-term goal is not just competition — it's cultivating student educational and business ventures, representing an investment in the local community. Top-performing teams will receive:
+            <p className="text-sm md:text-base text-muted-foreground mb-6">
+              LaunchPoint is designed to create lasting opportunities—not just
+              awards. Outstanding participants from both competitive events may
+              receive continued support and connections through our professional
+              network.
             </p>
 
-            <ul className="space-y-3 text-sm md:text-base text-muted-foreground">
+            <ul className="space-y-4 text-sm md:text-base text-muted-foreground">
               <li className="flex items-start gap-2">
-                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <ArrowRight
+                  className="text-accent flex-shrink-0 mt-1"
+                  size={16}
+                />
                 <span>
-                  <strong className="text-foreground">Office Hours</strong> with local business owners and professionals
+                  <strong className="text-foreground">
+                    One-on-one office hours
+                  </strong>{" "}
+                  with local entrepreneurs and business professionals.
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
-                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <ArrowRight
+                  className="text-accent flex-shrink-0 mt-1"
+                  size={16}
+                />
                 <span>
-                  <strong className="text-foreground">Career-focused</strong> mentorship from local business leaders
+                  <strong className="text-foreground">
+                    Professional mentorship
+                  </strong>{" "}
+                  from founders, executives, and Chamber member businesses.
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
-                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <ArrowRight
+                  className="text-accent flex-shrink-0 mt-1"
+                  size={16}
+                />
                 <span>
-                  <strong className="text-foreground">Structured feedback</strong> to sharpen skills, direction, and career vision
+                  <strong className="text-foreground">
+                    Personalized feedback
+                  </strong>{" "}
+                  to strengthen leadership, presentation, and strategic thinking
+                  skills.
                 </span>
               </li>
 
               <li className="flex items-start gap-2">
-                <ArrowRight className="text-accent flex-shrink-0 mt-1" size={16} />
+                <ArrowRight
+                  className="text-accent flex-shrink-0 mt-1"
+                  size={16}
+                />
                 <span>
-                  <strong className="text-foreground">Potential Early-Stage Advisory</strong> and investment pathways for the most promising ventures
+                  <strong className="text-foreground">
+                    Connections to the local business community
+                  </strong>{" "}
+                  for future internships, networking, entrepreneurial
+                  opportunities, and continued involvement with LaunchPoint.
                 </span>
               </li>
             </ul>
-
           </Card>
         </div>
 

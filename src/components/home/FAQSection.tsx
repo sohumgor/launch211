@@ -10,53 +10,66 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Who can participate in LaunchPoint?",
-      answer: "LaunchPoint is open to all high school students in the community, with a focus on District 211. You do not need to be a member of any specific club, enrolled in an incubator program, or have prior competition experience. If you're a high school student with a business idea, you're welcome to compete.",
+      answer:
+        "LaunchPoint is open to all District 211 high school students. No prior competition experience, business coursework, or club membership is required—students of all experience levels are encouraged to participate.",
     },
     {
       question: "How do I register?",
-      answer: "Registration will be available through our website once finalized. Teams register together with member names, school affiliation, and an adult supervisor contact. Registration will close 7 days before the event, and spots are capped based on judging capacity.",
+      answer:
+        "Registration will open online through the LaunchPoint website. Students will simply complete the registration form and select their competition and workshop preferences. No advisor or teacher approval is required.",
     },
     {
-      question: "What is the team size?",
-      answer: "Teams consist of 2–5 students. Each team develops and presents one original business concept (product or service) to a panel of judges.",
+      question: "What competitions are offered?",
+      answer:
+        "LaunchPoint features two competitive events: Venture Pitch, where students present an original business concept they prepare in advance, and Business Roleplay, where students analyze a confidential business scenario on-site before presenting their solution to judges.",
     },
     {
-      question: "How does the competition work?",
-      answer: "Each team delivers a 7 minute venture pitch followed by 3 minutes of Q&A from a panel of business professionals. Judges use a standardized, investor-style scoring rubric. Presentations run in 20-minute blocks across 2–4 simultaneous breakout rooms.",
+      question: "How does judging work?",
+      answer:
+        "Venture Pitch teams deliver a 7-minute presentation followed by 3 minutes of questions from judges. Business Roleplay participants receive a confidential scenario, have 20 minutes to prepare, then deliver a 7-minute presentation followed by 3 minutes of Q&A. Both competitions are evaluated by business professionals using standardized judging rubrics.",
     },
     {
-      question: "What are the prizes?",
-      answer: "1st Place: $1,000 · 2nd Place: $500 · 3rd Place: $250. Awards are structured as checks or scholarship-style funding intended to directly advance your business venture — not just general prize money. Winning teams also receive post-event opportunities including mentorship and office hours.",
+      question: "What are the awards?",
+      answer:
+        "LaunchPoint features over $2,000 in scholarship-style awards recognizing outstanding performance across both competitions. Top-performing students may also receive opportunities for mentorship, networking, office hours with professionals, and continued engagement with the local business community.",
     },
     {
       question: "Is there a registration fee?",
-      answer: "LaunchPoint is free to attend thanks to our sponsors and our partnership with the Palatine Area Chamber of Commerce. Registration is required to manage capacity.",
+      answer:
+        "A small registration fee is expected to help cover conference expenses. The final fee is still being finalized but is anticipated to be approximately $15 per participant.",
     },
     {
-      question: "Where is the event held?",
-      answer: "TBD: The 2026 LaunchPoint Venture Pitch Summit will be held at Harper College or Palatine High School in Palatine, IL on April 25, 2026. The venue features an amphitheater for opening/awards and breakout rooms for judging sessions.",
+      question: "Where and when is the conference?",
+      answer:
+        "The 2026 LaunchPoint Fall Conference will be held on Saturday, October 17, 2026, from 8:00 AM to 2:15 PM at Palatine High School (1111 N. Rohlwing Road, Palatine, IL).",
     },
     {
-      question: "What happens after the competition?",
-      answer: "Beyond prizes, top-performing teams will receive post-event opportunities including office hours with local business owners and investors, structured feedback sessions, connections to Chamber member mentors, and potential early-stage advisory support. The goal is venture continuation — not just a one-day event.",
-    },
-    { 
       question: "Will lunch be provided?",
-      answer: "Yes! A full catered lunch program will be offered to all participants from 11:30 AM - 12:30 PM.",
-    }
+      answer:
+        "Yes. A catered lunch will be provided for all registered participants during the conference.",
+    },
+    {
+      question: "Do I need business experience to compete?",
+      answer:
+        "Not at all. LaunchPoint is designed for students with a wide range of experience levels. Whether you're exploring business for the first time or already involved in entrepreneurship, finance, marketing, or business clubs, the conference provides an opportunity to learn, compete, and receive feedback from professionals.",
+    },
   ];
 
   return (
-    <section className="py-20" style={{ background: 'var(--gradient-section-3)' }}>
+    <section
+      className="py-20"
+      style={{ background: "var(--gradient-section-3)" }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold">Frequently Asked Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Frequently Asked Questions
+          </h2>
           <p className="text-xl text-muted-foreground">
             Have a question? We've got answers.
           </p>
         </div>
 
-        {/* FAQ Accordion - Centered and Extended */}
         <div className="max-w-4xl mx-auto mb-12">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
@@ -72,11 +85,16 @@ const FAQSection = () => {
           </Accordion>
         </div>
 
-        {/* Contact Section */}
         <div className="text-center space-y-4 max-w-2xl mx-auto pt-8 border-t border-border">
-          <h3 className="text-2xl md:text-3xl font-bold">Still have questions?</h3>
-          <p className="text-lg text-muted-foreground">Contact us and we'll get back to you promptly.</p>
-          <a 
+          <h3 className="text-2xl md:text-3xl font-bold">
+            Still have questions?
+          </h3>
+
+          <p className="text-lg text-muted-foreground">
+            Contact us and we'll get back to you promptly.
+          </p>
+
+          <a
             href="mailto:launch211team@gmail.com"
             className="inline-flex items-center gap-2 text-lg md:text-xl font-semibold text-primary hover:text-accent transition-colors"
           >
@@ -90,4 +108,3 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
-

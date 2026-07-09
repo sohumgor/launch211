@@ -12,7 +12,7 @@ const Footer = ({ className = "", style = {} }: { className?: string; style?: Re
               LaunchPoint
             </h3>
             <p className="text-xs md:text-sm text-muted-foreground">
-              A premier entrepreneurship competition for high school students in District 211 and beyond.
+              A premier business experience for high school students in District 211.
             </p>
           </div>
 
