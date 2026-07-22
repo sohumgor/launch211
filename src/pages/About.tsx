@@ -10,7 +10,7 @@ const About = () => {
   const founders = [
     {
       name: "Sohum Gorladku",
-      title: "Co-Founder & Operations Lead",
+      title: "Co-Founder & Executive Director",
       image: sohumPfp,
       bio: "Sohum Gorladku is a student at Palatine High School and co-founder of LaunchPoint. He is passionate about helping students explore business, entrepreneurship, and leadership opportunities. As an executive leader of FBLA, Sohum has led initiatives to grow membership, organize competitions, and mentor students in business and finance. He co-founded LaunchPoint to provide students across the district with hands-on business competitions, mentorship, and workshops that develop real-world skills. In his free time, he enjoys writing and conducting independent research on business and finance topics, as well as running cross country.",
     },
