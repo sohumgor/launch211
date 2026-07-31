@@ -1,24 +1,6 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
-
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
-      </div>
-    </div>
-  );
-};
-
+import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
+const NotFound = () => <div className="site-shell"><Seo title="Page not found | LaunchPoint" description="Return to the LaunchPoint conference website."/><Navbar/><main><section className="page-hero"><div className="site-container page-hero-inner"><p className="eyebrow eyebrow-light">404</p><h1>That page is not on the agenda.</h1><p>Return to the conference homepage or explore the current event plan.</p><p><Link to="/" className="button button-primary">Back to LaunchPoint</Link></p></div></section></main><Footer/></div>;
 export default NotFound;

@@ -1,59 +1,47 @@
+import { Instagram, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Instagram } from "lucide-react";
+import logo from "@/assets/launchpoint_logo_full.png";
+import { event } from "@/content/site";
 
-const Footer = ({ className = "", style = {} }: { className?: string; style?: React.CSSProperties }) => {
-  return (
-    <footer className={`bg-secondary/50 border-t border-border mt-20 ${className}`} style={style}>
-      <div className="container mx-auto px-4 py-6 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {/* About */}
-          <div className="space-y-2 md:space-y-4">
-            <h3 className="text-base md:text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              LaunchPoint
-            </h3>
-            <p className="text-xs md:text-sm text-muted-foreground">
-              A premier business experience for high school students in District 211.
-            </p>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-2 md:space-y-4">
-            <h4 className="text-sm md:text-base font-semibold">Contact</h4>
-            <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Mail size={14} className="md:w-4 md:h-4" />
-                <a 
-                  href="mailto:launch211team@gmail.com"
-                  className="hover:text-primary transition-colors"
-                >
-                  launch211team@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin size={14} className="md:w-4 md:h-4" />
-                <span>Palatine, Illinois</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Instagram size={14} className="md:w-4 md:h-4" />
-                <a 
-                  href="https://www.instagram.com/official_launchpoint/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  @launch_point_official
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-6 md:mt-12 pt-4 md:pt-8 border-t border-border text-center text-xs md:text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Launch 211. All rights reserved.</p>
+const Footer = () => (
+  <footer className="site-footer">
+    <div className="site-container footer-grid">
+      <div className="footer-brand">
+        <img src={logo} alt="LaunchPoint" width="634" height="215" />
+        <p>A student-led regional business conference connecting high school students with the local business community.</p>
+      </div>
+      <div>
+        <p className="footer-label">Explore</p>
+        <div className="footer-links">
+          <Link to="/about">The conference</Link>
+          <Link to="/competitions/pitch">Venture Pitch</Link>
+          <Link to="/competitions/roleplay">Business Roleplay</Link>
+          <Link to="/schedule">Schedule</Link>
         </div>
       </div>
-    </footer>
-  );
-};
+      <div>
+        <p className="footer-label">Get involved</p>
+        <div className="footer-links">
+          <Link to="/registration">Student updates</Link>
+          <Link to="/get-involved">Judges and volunteers</Link>
+          <Link to="/get-involved#sponsors">Sponsors</Link>
+          <a href={event.interestForm} target="_blank" rel="noreferrer">Interest form</a>
+        </div>
+      </div>
+      <div>
+        <p className="footer-label">Contact</p>
+        <div className="footer-links footer-contact">
+          <a href={`mailto:${event.email}`}><Mail aria-hidden="true" />{event.email}</a>
+          <a href={event.instagram} target="_blank" rel="noreferrer"><Instagram aria-hidden="true" />{event.instagramLabel}</a>
+          <span><MapPin aria-hidden="true" />Palatine, Illinois</span>
+        </div>
+      </div>
+    </div>
+    <div className="site-container footer-bottom">
+      <span>© {new Date().getFullYear()} LaunchPoint</span>
+      <span>Built for students ready to learn by doing.</span>
+    </div>
+  </footer>
+);
 
 export default Footer;

@@ -1,66 +1,7 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Registration from "./pages/Registration";
-import About from "./pages/About";
-import MarketingChallenge from "./pages/competitions/MarketingChallenge";
-import EthicsCompetition from "./pages/competitions/EthicsCompetition";
-import FinanceChallenge from "./pages/competitions/FinanceChallenge";
-import PitchCompetition from "./pages/competitions/PitchCompetition";
-import BusinessRoleplayCompetition from "./pages/competitions/BusinessRoleplayCompetition.tsx";
-import CareerPanel from "./pages/events/CareerPanel";
-import Workshops from "./pages/events/Workshops";
-
-const queryClient = new QueryClient();
-
-// Scroll to top component
-function ScrollHandler() {
-  const { pathname, hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      const el = document.getElementById(hash.replace("#", ""));
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    }
-  }, [pathname, hash]);
-
-  return null;
-}
-
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollHandler />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/registration" element={<Registration />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/competitions/marketing" element={<MarketingChallenge />} />
-          <Route path="/competitions/ethics" element={<EthicsCompetition />} />
-          <Route path="/competitions/investing" element={<FinanceChallenge />} />
-          <Route path="/competitions/pitch" element={<PitchCompetition />} />
-          <Route path="/competitions/roleplay" element={<BusinessRoleplayCompetition />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="/events/career-panel" element={<CareerPanel />} />
-          <Route path="/events/workshops" element={<Workshops />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
+import { lazy, Suspense, useEffect } from "react";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+const Index=lazy(()=>import("./pages/Index")); const About=lazy(()=>import("./pages/About")); const Registration=lazy(()=>import("./pages/Registration")); const Schedule=lazy(()=>import("./pages/Schedule")); const GetInvolved=lazy(()=>import("./pages/GetInvolved")); const Pitch=lazy(()=>import("./pages/competitions/PitchCompetition")); const Roleplay=lazy(()=>import("./pages/competitions/BusinessRoleplayCompetition")); const Workshops=lazy(()=>import("./pages/events/Workshops")); const NotFound=lazy(()=>import("./pages/NotFound"));
+function ScrollHandler(){const{pathname,hash}=useLocation();useEffect(()=>{if(hash)requestAnimationFrame(()=>document.getElementById(hash.slice(1))?.scrollIntoView());else window.scrollTo(0,0)},[pathname,hash]);return null}
+const App=()=> <BrowserRouter><ScrollHandler/><Suspense fallback={<div className="route-loading" role="status">Loading LaunchPoint...</div>}><Routes><Route path="/" element={<Index/>}/><Route path="/about" element={<About/>}/><Route path="/registration" element={<Registration/>}/><Route path="/schedule" element={<Schedule/>}/><Route path="/get-involved" element={<GetInvolved/>}/><Route path="/competitions/pitch" element={<Pitch/>}/><Route path="/competitions/roleplay" element={<Roleplay/>}/><Route path="/events/workshops" element={<Workshops/>}/><Route path="/competitions/marketing" element={<Navigate replace to="/competitions/roleplay"/>}/><Route path="/competitions/ethics" element={<Navigate replace to="/competitions/roleplay"/>}/><Route path="/competitions/investing" element={<Navigate replace to="/events/workshops"/>}/><Route path="/events/career-panel" element={<Navigate replace to="/events/workshops"/>}/><Route path="*" element={<NotFound/>}/></Routes></Suspense></BrowserRouter>;
 export default App;
+

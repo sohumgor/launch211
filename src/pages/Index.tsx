@@ -1,55 +1,154 @@
+import { ArrowRight, BriefcaseBusiness, CalendarDays, GraduationCap, MapPin, Presentation, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import HeroSection from "@/components/home/HeroSection";
-import DateLocationBar from "@/components/home/DateLocationBar";
-import EventsSection from "@/components/home/EventsSection";
-import AgendaSectionNew from "@/components/home/AgendaSectionNew";
-import PrizesSection from "@/components/home/PrizesSection";
-import SponsorsSection from "@/components/home/SponsorsSection";
-import FAQSection from "@/components/home/FAQSection";
-import PartersSection from "@/components/home/PartnersSection";
-import PartnersSection from "@/components/home/PartnersSection";
+import FaqList from "@/components/FaqList";
+import ScheduleList from "@/components/ScheduleList";
+import Seo from "@/components/Seo";
+import chamberLogo from "@/assets/Palatine_Chamber_Logo.png";
+import { competitions, event, prizeLevels } from "@/content/site";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main>
-        <section id="hero">
-          <HeroSection />
-        </section>
+const Index = () => (
+  <div className="site-shell">
+    <Seo title="LaunchPoint" description="A student-led regional business conference where high school students compete, learn from professionals, and build real-world business experience." />
+    <Navbar />
+    <main id="main-content">
+      <section className="home-hero">
+        <div className="hero-grid-pattern" aria-hidden="true" />
+        <div className="site-container home-hero-grid">
+          <div className="hero-copy">
+            <div className="status-pill"><span /> Fall 2026 conference</div>
+            <h1>Business gets real<br /><em>at LaunchPoint.</em></h1>
+            <p className="hero-lede">Compete in real-world business challenges, pitch original ventures, and learn directly from the professionals shaping the local economy.</p>
+            <div className="hero-actions">
+              <Link to="/registration" className="button button-primary">Get conference updates <ArrowRight aria-hidden="true" /></Link>
+              <Link to="/about" className="button button-ghost">Explore the conference</Link>
+            </div>
+            <p className="hero-note">Open to high school students. No club membership or prior competition experience required.</p>
+          </div>
 
-        <section id="date-location">
-          <DateLocationBar />
-        </section>
+          <aside className="event-ticket" aria-label="Conference details">
+            <div className="ticket-topline"><span>LaunchPoint 2026</span><span>LP—01</span></div>
+            <div className="ticket-date"><span>OCT</span><strong>17</strong><span>2026</span></div>
+            <div className="ticket-rule" />
+            <dl className="ticket-details">
+              <div><dt><CalendarDays aria-hidden="true" />Date</dt><dd>Saturday, October 17</dd></div>
+              <div><dt><MapPin aria-hidden="true" />Venue</dt><dd>Palatine High School</dd></div>
+              <div><dt><Users aria-hidden="true" />Expected</dt><dd>75–120 students</dd></div>
+            </dl>
+            <p className="ticket-planning">Date and venue are the current event plan; final confirmation will be posted before registration opens.</p>
+          </aside>
+        </div>
+      </section>
 
-        <section id="events">
-          <EventsSection />
-        </section>
+      <section className="proof-strip" aria-label="Conference highlights">
+        <div className="site-container proof-grid">
+          <div><strong>2</strong><span>business competitions</span></div>
+          <div><strong>$2K</strong><span>planned award pool</span></div>
+          <div><strong>3</strong><span>workshop tracks proposed</span></div>
+          <div><strong>1</strong><span>regional student community</span></div>
+        </div>
+      </section>
 
-        <section id="agenda">
-          <AgendaSectionNew />
-        </section>
+      <section className="section section-intro">
+        <div className="site-container split-heading">
+          <div>
+            <p className="eyebrow">Learning by doing</p>
+            <h2>A conference built around the decisions business leaders actually make.</h2>
+          </div>
+          <div className="intro-copy">
+            <p>LaunchPoint closes the distance between classroom concepts and professional practice. Students analyze, present, defend, question, and connect—inside an environment designed with local business leaders.</p>
+            <Link to="/about" className="text-link">Why LaunchPoint exists <ArrowRight aria-hidden="true" /></Link>
+          </div>
+        </div>
+      </section>
 
-        <section id="prizes">
-          <PrizesSection />
-        </section>
+      <section className="section competition-section">
+        <div className="site-container">
+          <div className="section-heading-row">
+            <div><p className="eyebrow">Choose your challenge</p><h2>Two ways to step into the room.</h2></div>
+            <p>One prepared. One live. Both judged by professionals who expect students to explain the thinking behind every decision.</p>
+          </div>
+          <div className="competition-grid">
+            {competitions.map((competition, index) => (
+              <Link to={competition.href} className="competition-panel" key={competition.slug}>
+                <div className="panel-number">0{index + 1}</div>
+                <p className="eyebrow">{competition.eyebrow}</p>
+                <h3>{competition.title}</h3>
+                <p>{competition.summary}</p>
+                <div className="panel-facts"><span>{competition.preparation}</span><span>{competition.format}</span></div>
+                <div className="panel-link">See competition details <ArrowRight aria-hidden="true" /></div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <section id="sponsors">
-          <SponsorsSection />
-        </section>
+      <section className="section experience-section">
+        <div className="site-container experience-grid">
+          <div className="experience-lead">
+            <p className="eyebrow eyebrow-light">Beyond the competition</p>
+            <h2>Meet the people behind the work.</h2>
+            <p>Workshops are designed as conversations and hands-on sessions—not long lectures. Students explore fields, hear honest career stories, and practice the skills professionals use every day.</p>
+            <Link to="/events/workshops" className="button button-light">Explore workshops <ArrowRight aria-hidden="true" /></Link>
+          </div>
+          <div className="experience-list">
+            <article><Presentation aria-hidden="true" /><div><span>01</span><h3>Marketing & branding</h3><p>Positioning, customer insight, storytelling, and go-to-market thinking.</p></div></article>
+            <article><BriefcaseBusiness aria-hidden="true" /><div><span>02</span><h3>Finance & investing</h3><p>How professionals assess opportunity, risk, value, and financial choices.</p></div></article>
+            <article><GraduationCap aria-hidden="true" /><div><span>03</span><h3>Entrepreneurship</h3><p>From identifying a problem to testing an idea and building momentum.</p></div></article>
+          </div>
+        </div>
+      </section>
 
-        <section id="faq">
-          <FAQSection />
-        </section>
+      <section className="section schedule-section">
+        <div className="site-container schedule-layout">
+          <div className="schedule-heading">
+            <p className="eyebrow">One focused Saturday</p>
+            <h2>The working conference schedule.</h2>
+            <p>{event.date}<br />{event.time}<br />{event.venue}</p>
+            <Link to="/schedule" className="text-link">View schedule notes <ArrowRight aria-hidden="true" /></Link>
+          </div>
+          <ScheduleList />
+        </div>
+      </section>
 
-        <section id="partners">
-          <PartnersSection />
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
+      <section className="section awards-section">
+        <div className="site-container awards-grid">
+          <div className="awards-copy">
+            <p className="eyebrow eyebrow-gold">Awards & continuation</p>
+            <h2>Recognition that keeps the work moving.</h2>
+            <p>Current sponsorship materials provide a $1,000 award pool for each primary competition, plus opportunities for professional feedback, mentorship, and connections to Chamber member businesses.</p>
+            <p className="fine-print">Final award rules and approved uses will be published with the competition rulebooks.</p>
+          </div>
+          <div className="prize-list">
+            {prizeLevels.map((prize) => <div key={prize.place}><span>{prize.place}</span><strong>{prize.amount}</strong><small>per competition</small></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section partner-section">
+        <div className="site-container partner-grid">
+          <div><p className="eyebrow">Strategic lead partner</p><h2>Built with the Palatine business community.</h2><p>The Palatine Area Chamber of Commerce provides community credibility and helps connect LaunchPoint with judges, speakers, mentors, sponsors, and local businesses.</p></div>
+          <div className="partner-logo"><img src={chamberLogo} alt="Palatine Area Chamber of Commerce" /></div>
+        </div>
+      </section>
+
+      <section className="section faq-section" id="faq">
+        <div className="site-container faq-grid">
+          <div><p className="eyebrow">Good to know</p><h2>Questions before registration opens.</h2><p>We are keeping unresolved details visible instead of guessing. Confirmed rules will be added as planning decisions are finalized.</p></div>
+          <FaqList />
+        </div>
+      </section>
+
+      <section className="closing-cta">
+        <div className="site-container closing-cta-inner">
+          <div><p className="eyebrow eyebrow-light">Fall 2026</p><h2>Your next business decision starts here.</h2></div>
+          <div><p>Tell us you’re interested and be first to receive registration, competition, and workshop updates.</p><a href={event.interestForm} target="_blank" rel="noreferrer" className="button button-light">Complete the interest form <ArrowRight aria-hidden="true" /></a></div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Index;

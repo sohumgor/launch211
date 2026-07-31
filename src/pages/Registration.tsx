@@ -1,135 +1,15 @@
-import Navbar from "@/components/Navbar";
+import { ArrowUpRight, CheckCircle2, Clock3 } from "lucide-react";
 import Footer from "@/components/Footer";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Calendar, Users, Trophy, ArrowRight, Rocket } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import PageHero from "@/components/PageHero";
+import Seo from "@/components/Seo";
+import { event } from "@/content/site";
 
-const Registration = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main>
-        {/* Header */}
-        <div className="py-10 md:py-16 mb-6 md:mb-12 animate-fade-in" style={{ background: 'var(--gradient-page-header)' }}>
-          <div className="container mx-auto px-4">
-            <div className="text-center space-y-2 md:space-y-4">
-              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-primary via-[hsl(195,70%,40%)] to-accent bg-clip-text text-transparent">Team Registration</h1>
-              <p className="text-sm md:text-xl text-muted-foreground px-2">
-                Register your team for the LaunchPoint Venture Pitch Summit
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="container mx-auto px-4 pb-10 md:pb-16">
-          <div className="max-w-4xl mx-auto space-y-6 md:space-y-12">
-
-          <Card className="p-4 md:p-8 lg:p-12 bg-card border-accent/20 shadow-lg">
-            <div className="space-y-4 md:space-y-8">
-              <div className="text-center space-y-2 md:space-y-4">
-                <div className="inline-flex p-3 md:p-4 rounded-full bg-gradient-to-br from-primary to-accent mb-2 md:mb-4">
-                  <Rocket className="text-primary-foreground" size={24} />
-                </div>
-                <h2 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Registration Coming Soon</h2>
-                <p className="text-xs md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-                  We're finalizing our registration system. Once ready, the registration link will be posted here. Registration will close 14 days before the event.
-                </p>
-                <div className="pt-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gradient-to-r from-primary to-accent text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <a
-                    href="https://forms.gle/h2XLN4iWxxHHy2BE6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Fill Out Interest Form →
-                  </a>
-                </Button>
-              </div>
-
-            </div>
-
-              <div className="grid grid-cols-3 gap-2 md:gap-6 pt-4 md:pt-8">
-                <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-accent/20">
-                  <Users className="mx-auto text-primary" size={20} />
-                  <h3 className="font-semibold text-primary text-[10px] md:text-base">Teams of 2–4</h3>
-                  <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
-                    Form a team and register for a competition
-                  </p>
-                </div>
-                <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-accent/5 to-primary/5 border border-accent/20">
-                  <Trophy className="mx-auto text-accent" size={20} />
-                  <h3 className="font-semibold text-accent text-[10px] md:text-base">$2,000 Prize Pool</h3>
-                  <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
-                    Compete for scholarship-style awards + post-event mentorship opportunities
-                  </p>
-                </div>
-                <div className="text-center space-y-1 md:space-y-2 p-2 md:p-6 rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-accent/20">
-                  <Calendar className="mx-auto text-primary" size={20} />
-                  <h3 className="font-semibold text-primary text-[10px] md:text-base">October 17, 2026</h3>
-                  <p className="text-[9px] md:text-sm text-muted-foreground hidden md:block">
-                    Half-day event
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-primary/5 via-transparent to-accent/5 p-3 md:p-6 rounded-xl border border-accent/20 space-y-2 md:space-y-4">
-                <h3 className="font-semibold text-sm md:text-lg text-primary">What to Expect:</h3>
-                <ul className="space-y-1.5 md:space-y-2 text-muted-foreground text-xs md:text-base">
-                  <li className="flex items-start gap-1.5 md:gap-2">
-                    <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Open to all District 211 high school students</span>
-                  </li>
-                  <li className="flex items-start gap-1.5 md:gap-2">
-                    <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Compete for scholarship-style awards ($1,000 / $500 / $250)</span>
-                  </li>
-                  <li className="flex items-start gap-1.5 md:gap-2">
-                    <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Interact with experienced business professionals</span>
-                  </li>
-                  <li className="flex items-start gap-1.5 md:gap-2">
-                    <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Post-event opportunities: office hours, mentorship, and advisory support</span>
-                  </li>
-                  <li className="flex items-start gap-1.5 md:gap-2">
-                    <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Choose workshop in your area of interest</span>
-                  </li>
-                  <li className="flex items-start gap-1.5 md:gap-2">
-                    <ArrowRight className="text-accent flex-shrink-0 mt-0.5" size={14} />
-                    <span>Catering lunch provided</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-accent/5 p-3 md:p-4 rounded-lg border border-accent/10">
-                <h4 className="font-semibold text-xs md:text-sm mb-1.5 md:mb-2">Registration will require:</h4>
-                <ul className="text-[11px] md:text-sm text-muted-foreground space-y-0.5 md:space-y-1">
-                  <li>• Team member names (2–4 students)</li>
-                  <li>• Registration fee ($15 per student) covers catered lunch</li>
-                  <li>• Choose competitive vent and workshop of interest</li>
-                </ul>
-              </div>
-
-              <div className="text-center pt-2 md:pt-4">
-                <p className="text-muted-foreground mb-2 md:mb-4 text-xs md:text-base">
-                  Questions about registration? Check our FAQ or send us a message.
-                </p>
-                <Button size="sm" variant="outline" asChild className="md:text-base">
-                  <a href="/#faq">View FAQs</a>
-                </Button>
-              </div>
-            </div>
-          </Card>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
+const Registration = () => <div className="site-shell"><Seo title="Registration | LaunchPoint" description="Join the LaunchPoint interest list and receive Fall 2026 registration updates."/><Navbar/><main>
+  <PageHero eyebrow="Student registration" title="Registration is being finalized." intro="Join the interest list now. We will send confirmed eligibility, fees, team rules, and competition registration details before enrollment opens."/>
+  <section className="section"><div className="site-container"><div className="registration-panel"><div><Clock3/><h2>Get the update first.</h2><p>The interest form is not a commitment and does not reserve a competition spot. It tells the team who wants to hear when full registration opens.</p><a href={event.interestForm} target="_blank" rel="noreferrer" className="button button-primary">Complete the interest form <ArrowUpRight/></a></div><div><p className="eyebrow">Currently planned</p><h3>Conference details</h3><ul><li><CheckCircle2/> {event.date}</li><li><CheckCircle2/> {event.time}</li><li><CheckCircle2/> {event.venue}</li><li><CheckCircle2/> Venture Pitch and Business Roleplay</li><li><CheckCircle2/> Workshops, lunch, and awards</li></ul></div></div>
+    <div className="content-grid registration-notes"><aside className="content-aside"><h3>Still to be confirmed</h3><dl><div><dt>Registration fee</dt><dd>Pending</dd></div><div><dt>Team sizes</dt><dd>Pending</dd></div><div><dt>Competition selection</dt><dd>Pending</dd></div><div><dt>Final rulebooks</dt><dd>Pending</dd></div></dl></aside><div className="prose-block"><h2>No guessed details.</h2><p>We are publishing what is known and clearly labeling what is still being decided. Full registration will not open until participation rules, costs, accessibility information, and required forms are ready.</p><div className="callout"><strong>School or adviser question?</strong><p>Email <a href={`mailto:${event.email}`}>{event.email}</a> and the team will follow up.</p></div></div></div>
+  </div></section>
+</main><Footer/></div>;
 export default Registration;
+

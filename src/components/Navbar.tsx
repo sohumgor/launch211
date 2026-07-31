@@ -1,105 +1,66 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import logo from "@/assets/launchpoint_logo.png";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import logo from "@/assets/launchpoint_logo_full.png";
+
+const links = [
+  { label: "Conference", to: "/about" },
+  { label: "Venture Pitch", to: "/competitions/pitch" },
+  { label: "Business Roleplay", to: "/competitions/roleplay" },
+  { label: "Schedule", to: "/schedule" },
+  { label: "Get involved", to: "/get-involved" },
+];
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => setOpen(false), [location.pathname]);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 transition-all hover:opacity-80 group">
-            <img src={logo} alt="LaunchPoint" className="h-5 md:h-7 w-auto transition-transform group-hover:scale-110" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              LaunchPoint
-            </span>
+    <header className="site-header">
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <div className="site-container header-inner">
+        <Link to="/" className="brand-link" aria-label="LaunchPoint home">
+          <img src={logo} alt="LaunchPoint" className="brand-logo" width="634" height="215" />
+        </Link>
+
+        <nav className="desktop-nav" aria-label="Primary navigation">
+          {links.map((link) => (
+            <NavLink key={link.to} to={link.to} className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}>
+              {link.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="header-actions">
+          <Link to="/registration" className="button button-small button-primary">
+            Registration
+            <ArrowUpRight aria-hidden="true" />
           </Link>
-
-          <div className="hidden md:flex items-center space-x-6">
-            <Link to="/competitions/pitch" className="text-sm font-medium hover:text-primary transition-colors">
-              Venture Pitch
-            </Link>
-
-            <Link to="/competitions/roleplay" className="text-sm font-medium hover:text-primary transition-colors">
-              Business Roleplay
-            </Link>
-            
-            <Link to="/events/workshops" className="text-sm font-medium hover:text-primary transition-colors">
-              Workshops
-            </Link>
-
-            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
-              About Us
-            </Link>
-
-            <Link to="/registration">
-              <Button variant="default" className="font-semibold transition-all hover:scale-105">
-                Register
-              </Button>
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            type="button"
+            className="menu-button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {open ? <X /> : <Menu />}
           </button>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t border-border">
-            <Link
-              to="/competitions/pitch"
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Venture Pitch
-            </Link>
-
-
-            <Link
-              to="/competitions/roleplay"
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Business Roleplay
-            </Link>
-
-            <Link
-              to="/events/workshops"
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Workshops
-            </Link>
-            
-            <Link
-              to="/about"
-              className="block px-4 py-3 text-sm font-medium hover:bg-secondary rounded-lg transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About Us
-            </Link>
-
-            <div className="pt-2">
-              <Link to="/registration" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="default" className="w-full font-semibold">
-                  Register
-                </Button>
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
-    </nav>
+
+      {open && (
+        <nav className="mobile-nav site-container" aria-label="Mobile navigation">
+          {links.map((link) => (
+            <NavLink key={link.to} to={link.to} className={({ isActive }) => `mobile-nav-link${isActive ? " active" : ""}`}>
+              {link.label}
+            </NavLink>
+          ))}
+          <Link to="/registration" className="button button-primary mobile-register">Registration</Link>
+        </nav>
+      )}
+    </header>
   );
 };
 
