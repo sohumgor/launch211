@@ -37,3 +37,133 @@
 @media(max-width:980px){.inquiry-grid,.workshop-format-grid{grid-template-columns:1fr;gap:55px}.inquiry-copy{position:static}.founder-card{grid-template-columns:170px 1fr}.workshop-track-grid{grid-template-columns:1fr}.workshop-track{min-height:300px}}
 @media(max-width:720px){.form-row,.founder-grid,.workshop-bottom-grid{grid-template-columns:1fr}.inquiry-form{padding:26px}.inquiry-form .button{width:100%}.founder-card{grid-template-columns:120px 1fr;min-height:210px}.founder-photo{min-height:210px}.founder-copy{padding:22px}.founder-copy h3{font-size:1.55rem}}
 @media(max-width:460px){.founder-card{grid-template-columns:1fr}.founder-photo{aspect-ratio:4/3;min-height:auto}.founder-copy{padding:25px}}
+
+/* Mobile refinement pass: keep the editorial identity without shrinking the
+   desktop composition into miniature. */
+a,button,summary,input,select,textarea{touch-action:manipulation}
+section[id]{scroll-margin-top:88px}
+.competition-panel,.info-card,.tier-card,.founder-card,.workshop-track{min-width:0}
+.footer-contact a,.inquiry-contact a{overflow-wrap:anywhere}
+
+@media(max-width:980px){
+  .founder-grid{grid-template-columns:1fr}
+  .founder-card{grid-template-columns:200px minmax(0,1fr)}
+}
+
+@media(max-width:720px){
+  .site-container{width:calc(100% - 32px)}
+  .section{padding:68px 0}
+  h2{font-size:clamp(2.15rem,10.5vw,3.15rem);line-height:1.02}
+  h3{font-size:1.22rem}
+  p{line-height:1.65}
+
+  .site-header{backdrop-filter:blur(12px)}
+  .header-inner{min-height:68px;gap:16px}
+  .brand-link{display:flex;min-height:44px;align-items:center}
+  .brand-logo{width:136px}
+  .menu-button{flex:none;cursor:pointer}
+  .mobile-nav{width:100%;padding:8px 16px calc(20px + env(safe-area-inset-bottom))}
+  .mobile-nav a:not(.button){min-height:48px;display:flex;align-items:center;padding:10px 4px;font-size:.94rem}
+  .mobile-nav-link.active{color:var(--blue)}
+  .mobile-nav .button{width:100%;margin-top:12px}
+
+  .home-hero-grid{padding:58px 0 64px;gap:42px}
+  .hero-copy h1{margin-bottom:22px;font-size:clamp(3rem,15vw,4.4rem);line-height:.88}
+  .hero-lede{font-size:1rem;line-height:1.65}
+  .hero-note{font-size:.8rem}
+  .status-pill{max-width:100%;margin-bottom:24px}
+  .event-ticket{width:100%;padding:22px}
+  .ticket-topline{font-size:.65rem}
+  .ticket-details dt{font-size:.75rem}
+  .ticket-details dd{font-size:.9rem}
+  .ticket-planning{font-size:.75rem}
+
+  .proof-grid div{min-height:104px;padding:20px}
+  .proof-grid strong{font-size:1.9rem}
+  .proof-grid span{font-size:.72rem}
+  .split-heading,.section-heading-row,.schedule-layout,.closing-cta-inner{gap:28px}
+  .section-heading-row{margin-bottom:34px}
+
+  .competition-panel{min-height:360px;padding:28px 24px}
+  .competition-panel h3{margin-top:48px;font-size:2.2rem}
+  .competition-panel>p:not(.eyebrow),.info-card p,.experience-list p,.schedule-row p,.tier-card p,.tier-card li{font-size:.95rem}
+  .panel-facts span{font-size:.66rem;line-height:1.4}
+  .experience-list article{grid-template-columns:36px minmax(0,1fr);gap:16px;padding:24px 0}
+  .experience-list article>svg{width:22px}
+
+  .schedule-row{padding:22px 0}
+  .schedule-time{font-size:.75rem}
+  .schedule-row h3{font-size:1.08rem}
+  .prize-list div{padding:24px 22px}
+  .prize-list strong{margin:20px 0 12px}
+
+  .page-hero{padding:68px 0 62px}
+  .page-hero h1{font-size:clamp(2.8rem,13.5vw,4.1rem);line-height:.92}
+  .page-hero p:not(.eyebrow){font-size:1rem;line-height:1.65}
+  .content-grid{gap:42px}
+  .content-aside{padding:24px}
+  .content-aside dd{font-size:.95rem}
+  .prose-block h2{margin-top:52px}
+  .prose-block p,.prose-block li{font-size:1rem;line-height:1.7}
+  .callout{margin:32px 0;padding:22px}
+  .card-grid{gap:12px}
+  .info-card{padding:24px}
+  .info-card h3{margin:20px 0 10px}
+  .tier-card{padding:24px}
+
+  .registration-panel>div{padding:26px 22px}
+  .registration-panel li{font-size:.95rem}
+  .registration-notes{margin-top:56px}
+
+  .involvement-options{padding-bottom:58px}
+  .inquiry-grid{gap:38px}
+  .inquiry-form{gap:20px;padding:24px 20px}
+  .form-row{gap:20px}
+  .form-helper,.form-status{font-size:.78rem}
+
+  .founder-card{grid-template-columns:130px minmax(0,1fr);min-height:220px}
+  .founder-photo{min-height:220px}
+  .founder-copy{padding:22px 20px}
+  .founder-copy h3{font-size:1.6rem}
+  .founder-role{font-size:.7rem;line-height:1.45}
+  .founder-copy>p:last-child{font-size:.9rem}
+
+  .workshop-track-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+  .workshop-track{width:100%;min-height:300px;padding:28px 24px}
+  .workshop-track h3{font-size:1.9rem}
+  .workshop-track p,.workshop-steps p,.workshop-bottom-grid p:not(.eyebrow){font-size:.94rem}
+  .workshop-format-grid{gap:42px}
+  .workshop-steps li{grid-template-columns:38px minmax(0,1fr);gap:14px}
+  .workshop-bottom-grid>div{padding:28px 24px}
+
+  .closing-cta{padding:64px 0}
+  .closing-cta .button{width:100%}
+  .partner-logo{min-height:200px;padding:30px}
+
+  .footer-grid{gap:36px 28px;padding-top:58px;padding-bottom:44px}
+  .footer-brand p{font-size:.88rem}
+  .footer-links a,.footer-links span{font-size:.82rem;line-height:1.45}
+  .footer-links a{min-height:44px;margin-bottom:4px;align-items:center}
+  .footer-bottom{font-size:.72rem;line-height:1.5}
+}
+
+@media(max-width:460px){
+  .site-container{width:calc(100% - 28px)}
+  .section{padding:60px 0}
+  .home-hero-grid{padding-top:50px}
+  .ticket-date{gap:10px}
+  .ticket-date strong{font-size:4.6rem}
+  .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proof-grid div,.proof-grid div:nth-child(3){border-left:1px solid rgba(6,23,47,.18)}
+  .founder-card{grid-template-columns:1fr}
+  .founder-photo{min-height:auto;aspect-ratio:4/3}
+  .founder-copy{padding:24px}
+  .workshop-track h3{font-size:1.72rem;overflow-wrap:break-word}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+  .footer-brand,.footer-grid>div:last-child{grid-column:1/-1}
+  .footer-bottom{gap:14px}
+}
+
+@media(hover:none){
+  .button:hover,.competition-panel:hover{transform:none}
+}
