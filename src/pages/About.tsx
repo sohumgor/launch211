@@ -35,7 +35,7 @@ const About = () => (
 
       <section className="section founders-section">
         <div className="site-container">
-          <div className="section-heading-row"><div><p className="eyebrow">The student team</p><h2>Meet the students behind LaunchPoint.</h2></div><p>Sohum and Raj co-founded LaunchPoint after seeing a gap between classroom business education and practical opportunities for students to apply it.</p></div>
+          <div className="section-heading-row"><div><p className="eyebrow">The student team</p><h2>Meet the students behind LaunchPoint.</h2></div></div>
           <div className="founder-grid">{founders.map((founder) => <article className="founder-card" key={founder.name}><div className="founder-photo"><img src={founder.image} alt={`${founder.name}, ${founder.role}`} loading="lazy" /></div><div className="founder-copy"><p className="eyebrow">Student co-founder</p><h3>{founder.name}</h3><p className="founder-role">{founder.role}</p><p>{founder.focus}</p></div></article>)}</div>
         </div>
       </section>
@@ -49,4 +49,3 @@ const About = () => (
 );
 
 export default About;
-
