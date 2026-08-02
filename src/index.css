@@ -183,6 +183,16 @@ section[id]{scroll-margin-top:88px}
   .footer-bottom{gap:14px}
 }
 
+.footer-links a{position:relative;cursor:pointer;transition:color .2s ease,transform .2s ease}
+.footer-links a:after{content:"";position:absolute;right:0;bottom:-4px;left:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.footer-links a:hover,.footer-links a:focus-visible{color:#fff;transform:translateX(3px)}
+.footer-links a:hover:after,.footer-links a:focus-visible:after{transform:scaleX(1)}
+.footer-links a:hover svg,.footer-links a:focus-visible svg{color:var(--teal)}
+.footer-links a:active{color:#fff;transform:translateX(2px) scale(.99)}
+
 @media(hover:none){
   .button:hover,.competition-panel:hover{transform:none}
+  .footer-links a{color:#d4dde6}
+  .footer-links a:after{bottom:3px;opacity:.8;transform:scaleX(.24)}
+  .footer-links a:active:after{transform:scaleX(1)}
 }
