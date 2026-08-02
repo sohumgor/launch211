@@ -97,11 +97,11 @@ export const faqs = [
   },
   {
     question: "How do the awards work?",
-    answer: "Current sponsorship materials allocate $500, $300, and $200 awards for the top three teams in each primary competition, creating a $2,000 total prize pool. Final award and disbursement terms will be included in the official rules.",
+    answer: "The award structure allocates $500, $300, and $200 to the top three teams in each primary competition, creating a $2,000 total prize pool. Official rules will explain award eligibility and disbursement.",
   },
   {
     question: "Will lunch be provided?",
-    answer: "Lunch is included in the current event plan. Final dietary, allergy, and accessibility questions will be collected during registration.",
+    answer: "Lunch is included in the conference schedule. Dietary, allergy, and accessibility questions will be collected during registration.",
   },
   {
     question: "How can a professional get involved?",

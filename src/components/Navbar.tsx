@@ -21,17 +21,16 @@ const Navbar = () => {
     <header className="site-header">
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <div className="site-container header-inner">
-        <Link to="/" className="brand-link" aria-label="LaunchPoint home"><img src={logo} alt="LaunchPoint" className="brand-logo" width="634" height="215" /></Link>
+        <Link to="/" className="brand-link" aria-label="LaunchPoint home"><img src={logo} alt="LaunchPoint" className="brand-logo" width="2003" height="522" /></Link>
         <nav className="desktop-nav" aria-label="Primary navigation">{links.map((link) => <NavLink key={link.to} to={link.to} className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}>{link.label}</NavLink>)}</nav>
         <div className="header-actions">
           <Link to="/registration" className="button button-small button-primary">Registration <ArrowUpRight aria-hidden="true" /></Link>
-          <button type="button" className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen((value) => !value)}>{open ? <X /> : <Menu />}</button>
+          <button type="button" className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-controls="mobile-navigation" aria-expanded={open} onClick={() => setOpen((value) => !value)}>{open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</button>
         </div>
       </div>
-      {open && <nav className="mobile-nav site-container open" aria-label="Mobile navigation">{links.map((link) => <NavLink key={link.to} to={link.to} className={({ isActive }) => `mobile-nav-link${isActive ? " active" : ""}`}>{link.label}</NavLink>)}<Link to="/registration" className="button button-primary mobile-register">Registration</Link></nav>}
+      {open && <nav id="mobile-navigation" className="mobile-nav site-container open" aria-label="Mobile navigation">{links.map((link) => <NavLink key={link.to} to={link.to} className={({ isActive }) => `mobile-nav-link${isActive ? " active" : ""}`}>{link.label}</NavLink>)}<Link to="/registration" className="button button-primary mobile-register">Registration</Link></nav>}
     </header>
   );
 };
 
 export default Navbar;
-

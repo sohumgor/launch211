@@ -21,7 +21,7 @@ const About = () => (
       <PageHero eyebrow="About LaunchPoint" title="Classroom knowledge, put to work." intro="LaunchPoint is a student-led regional business conference designed to make professional experience more accessible to high school students." />
       <section className="section">
         <div className="site-container content-grid">
-          <aside className="content-aside"><h3>At a glance</h3><dl><div><dt>Audience</dt><dd>High school students</dd></div><div><dt>Format</dt><dd>Competitions, workshops, speakers, and mentorship</dd></div><div><dt>Region</dt><dd>Palatine and surrounding communities</dd></div><div><dt>Lead partner</dt><dd>Palatine Area Chamber of Commerce</dd></div></dl></aside>
+          <aside className="content-aside"><h2 className="aside-heading">At a glance</h2><dl><div><dt>Audience</dt><dd>High school students</dd></div><div><dt>Format</dt><dd>Competitions, workshops, speakers, and mentorship</dd></div><div><dt>Region</dt><dd>Palatine and surrounding communities</dd></div><div><dt>Lead partner</dt><dd>Palatine Area Chamber of Commerce</dd></div></dl></aside>
           <div className="prose-block">
             <h2>Why LaunchPoint exists</h2>
             <p>Students can learn the language of business in class, but it becomes real when they must make a recommendation, defend an assumption, answer an unexpected question, or explain an idea to someone working in the field.</p>

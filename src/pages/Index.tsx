@@ -12,7 +12,7 @@ const Index = () => (
   <div className="site-shell">
     <Seo title="LaunchPoint" description="A student-led regional business conference where high school students compete, learn from professionals, and build real-world business experience." />
     <Navbar />
-    <main id="main-content">
+    <main id="main-content" tabIndex={-1}>
       <section className="home-hero">
         <div className="hero-grid-pattern" aria-hidden="true" />
         <div className="site-container home-hero-grid">
@@ -36,7 +36,7 @@ const Index = () => (
               <div><dt><MapPin aria-hidden="true" />Venue</dt><dd>Palatine High School</dd></div>
               <div><dt><Users aria-hidden="true" />Expected</dt><dd>75–120 students</dd></div>
             </dl>
-            <p className="ticket-planning">Date and venue are the current event plan; final confirmation will be posted before registration opens.</p>
+            <p className="ticket-planning">Registration updates will include any schedule or venue changes.</p>
           </aside>
         </div>
       </section>
@@ -44,8 +44,8 @@ const Index = () => (
       <section className="proof-strip" aria-label="Conference highlights">
         <div className="site-container proof-grid">
           <div><strong>2</strong><span>business competitions</span></div>
-          <div><strong>$2K</strong><span>planned award pool</span></div>
-          <div><strong>3</strong><span>workshop tracks proposed</span></div>
+          <div><strong>$2K</strong><span>competition award pool</span></div>
+          <div><strong>3</strong><span>workshop tracks</span></div>
           <div><strong>1</strong><span>regional student community</span></div>
         </div>
       </section>
@@ -104,7 +104,7 @@ const Index = () => (
         <div className="site-container schedule-layout">
           <div className="schedule-heading">
             <p className="eyebrow">One focused Saturday</p>
-            <h2>The working conference schedule.</h2>
+            <h2>The conference day at a glance.</h2>
             <p>{event.date}<br />{event.time}<br />{event.venue}</p>
             <Link to="/schedule" className="text-link">View schedule notes <ArrowRight aria-hidden="true" /></Link>
           </div>
@@ -117,8 +117,8 @@ const Index = () => (
           <div className="awards-copy">
             <p className="eyebrow eyebrow-gold">Awards & continuation</p>
             <h2>Recognition that keeps the work moving.</h2>
-            <p>Current sponsorship materials provide a $1,000 award pool for each primary competition, plus opportunities for professional feedback, mentorship, and connections to Chamber member businesses.</p>
-            <p className="fine-print">Final award rules and approved uses will be published with the competition rulebooks.</p>
+            <p>Each primary competition includes a $1,000 award pool, plus opportunities for professional feedback, mentorship, and connections to Chamber member businesses.</p>
+            <p className="fine-print">Official competition rules will explain award eligibility, approved uses, and disbursement.</p>
           </div>
           <div className="prize-list">
             {prizeLevels.map((prize) => <div key={prize.place}><span>{prize.place}</span><strong>{prize.amount}</strong><small>per competition</small></div>)}
@@ -133,9 +133,9 @@ const Index = () => (
         </div>
       </section>
 
-      <section className="section faq-section" id="faq">
+      <section className="section faq-section" id="faq" tabIndex={-1}>
         <div className="site-container faq-grid">
-          <div><p className="eyebrow">Good to know</p><h2>Questions before registration opens.</h2><p>We are keeping unresolved details visible instead of guessing. Confirmed rules will be added as planning decisions are finalized.</p></div>
+          <div><p className="eyebrow">Good to know</p><h2>Questions before registration opens.</h2><p>Registration details and official competition rules will be added as soon as they are confirmed.</p></div>
           <FaqList />
         </div>
       </section>
