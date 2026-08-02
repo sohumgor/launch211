@@ -67,8 +67,8 @@ const GetInvolved = () => {
 
         <section className="section partner-section" id="sponsors">
           <div className="site-container">
-            <div className="section-heading-row"><div><p className="eyebrow">Sponsorship</p><h2>Five ways to back the conference.</h2></div><p>Benefits are based on current sponsorship materials and can be shaped with the team before an agreement is finalized.</p></div>
-            <div className="tier-list">{sponsorTiers.map((tier) => <article className="tier-card" key={tier.name}><div><h3>{tier.name}</h3><div className="tier-amount">{tier.amount}</div><p>{tier.note}</p></div><ul>{tier.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul></article>)}</div>
+            <div className="section-heading-row"><div><p className="eyebrow">Sponsorship</p><h2>Five ways to back the conference.</h2></div><p>Each sponsorship package can be tailored with our team before the partnership is finalized.</p></div>
+            <div className="tier-list">{sponsorTiers.map((tier) => <article className="tier-card" key={tier.name}><div className="tier-summary"><h3>{tier.name}</h3><div className="tier-amount">{tier.amount}</div><p>{tier.note}</p></div><div className="tier-benefits"><p>Included benefits</p><ul>{tier.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul></div></article>)}</div>
           </div>
         </section>
       </main>
@@ -78,4 +78,3 @@ const GetInvolved = () => {
 };
 
 export default GetInvolved;
-
