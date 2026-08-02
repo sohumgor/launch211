@@ -49,12 +49,17 @@
 .tier-benefits li:before{content:"";position:absolute;top:.68em;left:0;width:7px;height:2px;background:var(--teal)}
 .tier-card:first-child .tier-benefits{border-top:0;border-left:1px solid var(--line);padding:4px 0 4px 32px}
 .tier-card:first-child .tier-benefits ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+.sponsor-inquiry{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:28px;border-top:1px solid var(--line);padding-top:24px}
+.sponsor-inquiry p{margin:0;color:var(--muted)}
+.sponsor-inquiry strong{color:var(--ink)}
+.sponsor-inquiry .text-link{min-height:44px;flex-shrink:0}
 
 @media(max-width:720px){
   .tier-list{grid-template-columns:1fr;gap:14px}
   .tier-card,.tier-card:first-child{grid-column:auto;grid-template-columns:1fr;gap:20px;padding:24px}
   .tier-card:first-child .tier-benefits{border-top:1px solid var(--line);border-left:0;padding:20px 0 0}
   .tier-card:first-child .tier-benefits ul{grid-template-columns:1fr}
+  .sponsor-inquiry{align-items:flex-start;flex-direction:column;gap:8px}
 }
 
 /* Mobile refinement pass: keep the editorial identity without shrinking the
