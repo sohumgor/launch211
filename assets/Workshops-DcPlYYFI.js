@@ -1,0 +1,11 @@
+import{j as s,L as r}from"./index-DRc14hSj.js";import{c as o,S as n,N as t,F as c}from"./Seo-C5eDJZnz.js";import{P as l}from"./PageHero-BLqY4mH0.js";import{B as h}from"./briefcase-business-BE38J5bk.js";import{A as d}from"./arrow-right-EvqlI4In.js";/**
+ * @license lucide-react v0.462.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const p=o("ChartColumn",[["path",{d:"M3 3v16a2 2 0 0 0 2 2h16",key:"c24i48"}],["path",{d:"M18 17V9",key:"2bz60n"}],["path",{d:"M13 17V5",key:"1frdt8"}],["path",{d:"M8 17v-3",key:"17ska0"}]]);/**
+ * @license lucide-react v0.462.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const k=o("Megaphone",[["path",{d:"m3 11 18-5v12L3 14v-3z",key:"n962bs"}],["path",{d:"M11.6 16.8a3 3 0 1 1-5.8-1.6",key:"1yl0tm"}]]),m=[{icon:k,title:"Marketing Workshop"},{icon:p,title:"Finance Workshop"},{icon:h,title:"Business Management Workshop"}],v=()=>s.jsxs("div",{className:"site-shell",children:[s.jsx(n,{title:"Workshops",description:"Interactive LaunchPoint business workshops led by local professionals."}),s.jsx(t,{}),s.jsxs("main",{children:[s.jsx(l,{eyebrow:"Professional workshops",title:"Explore your interests in business.",intro:"Marketing, Finance, and Business Management workshops are planned for LaunchPoint. Session details will be announced soon."}),s.jsx("section",{className:"section workshop-overview",children:s.jsxs("div",{className:"site-container",children:[s.jsxs("div",{className:"section-heading-row",children:[s.jsxs("div",{children:[s.jsx("p",{className:"eyebrow",children:"Workshop tracks"}),s.jsx("h2",{children:"Find your field."})]}),s.jsx("span",{className:"planning-badge",children:"Details coming soon"})]}),s.jsx("div",{className:"workshop-track-grid",children:m.map(({icon:a,title:e},i)=>s.jsxs("article",{className:"workshop-track workshop-track-preview",children:[s.jsxs("div",{className:"workshop-number",children:["0",i+1]}),s.jsx(a,{"aria-hidden":"true"}),s.jsx("h3",{children:e})]},e))}),s.jsxs(r,{to:"/registration",className:"text-link workshop-registration-link",children:["Get registration updates ",s.jsx(d,{"aria-hidden":"true"})]})]})})]}),s.jsx(c,{})]});export{v as default};
