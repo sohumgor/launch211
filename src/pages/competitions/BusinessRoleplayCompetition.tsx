@@ -1,4 +1,135 @@
-import { CheckCircle2 } from "lucide-react";
-import Footer from "@/components/Footer"; import Navbar from "@/components/Navbar"; import PageHero from "@/components/PageHero"; import Seo from "@/components/Seo"; import { prizeLevels } from "@/content/site";
-const BusinessRoleplayCompetition=()=> <div className="site-shell"><Seo title="Business Roleplay | LaunchPoint" description="Analyze a live business case and present a practical recommendation."/><Navbar/><main><PageHero eyebrow="Live case competition" title="Business Roleplay" intro="Analyze a realistic management, marketing, or finance scenario under time pressure and present a practical recommendation."/><section className="section"><div className="site-container content-grid"><aside className="content-aside"><h2 className="aside-heading">Competition brief</h2><dl><div><dt>Case release</dt><dd>At the conference</dd></div><div><dt>Preparation</dt><dd>20 minutes</dd></div><div><dt>Presentation</dt><dd>7 minutes</dd></div><div><dt>Questions</dt><dd>3 minutes</dd></div></dl></aside><div className="prose-block"><h2>Think clearly under pressure.</h2><p>Participants receive a business situation on site, identify the central decision, and recommend a path forward. The best responses are specific, realistic, and connected to the facts in the case.</p><h2>Possible case areas</h2><ul>{["Marketing and customer strategy","Operations and management","Finance and resource allocation","Leadership, ethics, and stakeholder decisions"].map(x=><li key={x}><CheckCircle2 size={16}/> {x}</li>)}</ul><h2>What judges want to hear</h2><p>A clear diagnosis, a prioritized recommendation, evidence from the case, awareness of tradeoffs, and a sensible way to measure success.</p><div className="callout"><strong>Competition awards</strong><p>{prizeLevels.map(x=>`${x.place}: ${x.amount}`).join(" · ")} per competition. Official rules will include team format, scoring details, award eligibility, and disbursement.</p></div></div></div></section></main><Footer/></div>;
-export default BusinessRoleplayCompetition;
+import CompetitionGuide, { type Guide } from "@/components/CompetitionGuide";
+
+const guide: Guide = {
+  "title": "Business Roleplay",
+  "eyebrow": "Live case competition",
+  "intro": "Step into an unfamiliar business situation with your team. Read the case, make a recommendation, and present to a judge playing an investor or business partner.",
+  "facts": [
+    {
+      "label": "Team",
+      "value": "2–4 members"
+    },
+    {
+      "label": "Preparation",
+      "value": "15 minutes"
+    },
+    {
+      "label": "Presentation",
+      "value": "7 minutes"
+    },
+    {
+      "label": "Questions",
+      "value": "2 minutes"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Read, decide, prepare",
+      "time": "15 min",
+      "detail": "Receive the printed scenario and prepare together using the supplied notecards. Identify your role, the judge’s role, and the five performance indicators."
+    },
+    {
+      "title": "Present your recommendation",
+      "time": "7 min",
+      "detail": "Address the judge in character and support your decision with facts from the scenario. You receive a one-minute warning and must stop when time is called."
+    },
+    {
+      "title": "Answer in character",
+      "time": "2 min",
+      "detail": "Respond to the judge’s follow-up questions. Every member must answer at least one. Return the scenario and all notecards at the end."
+    }
+  ],
+  "preparationTitle": "Practice making a decision.",
+  "preparationIntro": "Cases focus on Entrepreneurship and Business Management. Critical thinking, problem solving, collaboration, and creativity are assessed throughout your response.",
+  "preparation": [
+    {
+      "title": "Understand the situation",
+      "detail": "Read the whole packet before taking notes. Identify the business, your role, the judge’s role, and the decision you have been asked to make."
+    },
+    {
+      "title": "Find the central issue",
+      "detail": "Separate the main problem from background details. Pay attention to the numbers and constraints in the case."
+    },
+    {
+      "title": "Cover all five performance indicators",
+      "detail": "Use the scenario’s criteria to organize your response. Start with your recommendation, then explain your reasoning and how to carry it out."
+    },
+    {
+      "title": "Use the facts provided",
+      "detail": "Make specific comparisons and justify your choices. Do not invent facts that contradict the scenario."
+    },
+    {
+      "title": "Prepare as a team",
+      "detail": "Decide who presents each point, anticipate follow-up questions, and practice within the 15-minute preparation window."
+    },
+    {
+      "title": "Stay in character",
+      "detail": "Speak directly to the business partner or investor the judge is playing. Use notes as support rather than reading your presentation."
+    }
+  ],
+  "materials": [
+    {
+      "title": "Provided for your team",
+      "items": [
+        "A printed business scenario, revealed when preparation begins.",
+        "Two notecards and a pencil per member. Both sides of the cards may be used.",
+        "A quiet preparation space, timer, and judge."
+      ]
+    },
+    {
+      "title": "Keep it spoken",
+      "items": [
+        "No phones, laptops, tablets, or outside reference materials.",
+        "No slides, props, or visual aids.",
+        "Use only the supplied scenario and notecards; hand in all materials at the end."
+      ]
+    }
+  ],
+  "participation": "Every member must speak during the presentation and answer at least one judge question. Teams consist of 2–4 members.",
+  "scoring": [
+    {
+      "title": "Response criteria",
+      "points": 20,
+      "detail": "Understanding the business situation and objectives (10), plus a logical recommendation and implementation plan (10)."
+    },
+    {
+      "title": "Scenario performance indicators",
+      "points": 50,
+      "detail": "Five indicators specific to your case, worth 10 points each. They are the largest part of your score and are listed in the scenario packet."
+    },
+    {
+      "title": "Presentation criteria",
+      "points": 30,
+      "detail": "Organization and preparedness (10), delivery and presence (10), and effective Q&A with everyone contributing (10)."
+    }
+  ],
+  "scoringNote": "Each criterion is scored 0–10: 9–10 exceeds expectations, 6–8 meets expectations, 3–5 is below expectations, and 0–2 provides little or no value. The four core competencies are reflected in these criteria, not scored separately.",
+  "resources": [
+    {
+      "title": "Business Roleplay event guide",
+      "detail": "Complete rules, permitted materials, preparation advice, and scoring rubric.",
+      "href": "https://drive.google.com/file/d/15Vr7iMvpl4OGMZGb9tU1WKxX_VmMiTwU/view"
+    },
+    {
+      "title": "Practice 01 · Channel Strategy Expansion",
+      "detail": "DR. SMOOTHIE: compare a second truck with a storefront. Focus: Entrepreneurship.",
+      "href": "https://drive.google.com/file/d/12FFG2Z9NzTp3oIMJtbkaabKke-R0kQGH/view"
+    },
+    {
+      "title": "Practice 02 · Entrepreneurial Venture Planning",
+      "detail": "Plan how to launch and grow a business selling 3D-printed planters. Focus: Entrepreneurship.",
+      "href": "https://drive.google.com/file/d/1cMbwTR4cHneNV97Eq_7p7jNu3nCxj1GI/view"
+    },
+    {
+      "title": "Practice 03 · Service Expansion Strategy",
+      "detail": "SPIN & TUMBLE: develop a new service for laundromat customers. Focus: Product/Service Management.",
+      "href": "https://drive.google.com/file/d/15GNnasp7n1y84xVhJPtMW7Ge8R7m7L4p/view"
+    }
+  ],
+  "other": {
+    "title": "Venture Pitch",
+    "href": "/competitions/pitch"
+  }
+};
+
+export default function BusinessRoleplayCompetition() { return <CompetitionGuide guide={guide} />; }

@@ -7,6 +7,7 @@ export const event = {
   venue: "Palatine High School",
   address: "1111 N. Rohlwing Road, Palatine, Illinois",
   attendance: "75–120 students",
+  registrationFee: "Approximately $20 (pending confirmation)",
   interestForm: "https://forms.gle/h2XLN4iWxxHHy2BE6",
   email: "launch211team@gmail.com",
   instagram: "https://www.instagram.com/official_launchpoint/",
@@ -28,7 +29,7 @@ export const competitions = [
     eyebrow: "Prepared competition",
     title: "Venture Pitch",
     summary: "Build an original business concept, make the case for it, and defend your assumptions before an investor-style judging panel.",
-    format: "7-minute pitch + 3-minute Q&A",
+    format: "7-minute pitch + 2-minute Q&A · Draft",
     preparation: "Prepared before the conference",
     href: "/competitions/pitch",
   },
@@ -36,9 +37,9 @@ export const competitions = [
     slug: "roleplay",
     eyebrow: "Live case competition",
     title: "Business Roleplay",
-    summary: "Analyze a realistic management, marketing, or finance scenario under time pressure and present a practical recommendation.",
-    format: "7-minute presentation + 3-minute Q&A",
-    preparation: "20-minute on-site preparation",
+    summary: "Work through an entrepreneurship or business management scenario with your team, then present your recommendation to a judge in character.",
+    format: "7-minute presentation + 2-minute Q&A",
+    preparation: "15-minute on-site preparation",
     href: "/competitions/roleplay",
   },
 ];
@@ -94,6 +95,14 @@ export const faqs = [
   {
     question: "Can students enter both competitions?",
     answer: "That rule is still being finalized. The registration page will clearly state competition and team-selection rules before registration opens.",
+  },
+  {
+    question: "How many students are on a team?",
+    answer: "Both current event guides specify teams of 2–4 students. Every member presents and answers at least one judge question. Venture Pitch guidance is currently in draft form.",
+  },
+  {
+    question: "Is there a registration fee?",
+    answer: "The registration fee is expected to be approximately $20 to help cover conference costs. The final amount will be confirmed before registration opens.",
   },
   {
     question: "How do the awards work?",

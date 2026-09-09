@@ -5,12 +5,14 @@ import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import Seo from "@/components/Seo";
 import chamberLogo from "@/assets/Palatine_Chamber_Logo.png";
+import krishnaPhoto from "@/assets/krishna-pabbu.jpg";
 import sohumPhoto from "@/assets/sohumpfp.jpg";
 import rajPhoto from "@/assets/rajpfp.jpg";
 
-const founders = [
-  { name: "Sohum Gorladku", role: "Co-Founder & Executive Director", image: sohumPhoto, focus: "Conference strategy, digital experience, outreach, and student programming." },
-  { name: "Raj Kamepalli", role: "Co-Founder & Financial Lead", image: rajPhoto, focus: "Financial planning, partnership coordination, and event operations." },
+const teamMembers = [
+  { name: "Sohum Gorladku", label: "Student co-founder", role: "Co-Founder & Executive Director", image: sohumPhoto, focus: "Competition design, workshop planning, event scheduling, and Chamber relations." },
+  { name: "Raj Kamepalli", label: "Student co-founder", role: "Co-Founder & Financial Lead", image: rajPhoto, focus: "Financial planning, student research, sponsor outreach, and partnership coordination." },
+  { name: "Krishna Pabbu", label: "Executive Board", role: "Director of Communications & Technology", image: krishnaPhoto, focus: "Website and digital experience, promotion and outreach, and day-of operations." },
 ];
 
 const About = () => (
@@ -36,7 +38,7 @@ const About = () => (
       <section className="section founders-section">
         <div className="site-container">
           <div className="section-heading-row"><div><p className="eyebrow">The student team</p><h2>Meet the students behind LaunchPoint.</h2></div></div>
-          <div className="founder-grid">{founders.map((founder) => <article className="founder-card" key={founder.name}><div className="founder-photo"><img src={founder.image} alt={`${founder.name}, ${founder.role}`} loading="lazy" /></div><div className="founder-copy"><p className="eyebrow">Student co-founder</p><h3>{founder.name}</h3><p className="founder-role">{founder.role}</p><p>{founder.focus}</p></div></article>)}</div>
+          <div className="founder-grid">{teamMembers.map((member) => <article className="founder-card" key={member.name}><div className="founder-photo"><img src={member.image} alt={`${member.name}, ${member.role}`} loading="lazy" /></div><div className="founder-copy"><p className="eyebrow">{member.label}</p><h3>{member.name}</h3><p className="founder-role">{member.role}</p><p>{member.focus}</p></div></article>)}</div>
         </div>
       </section>
 

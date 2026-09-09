@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import logo from "@/assets/launchpoint_logo_full.png";
@@ -14,8 +14,17 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
   const location = useLocation();
   useEffect(() => setOpen(false), [location.pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { setOpen(false); menuButton.current?.focus(); }
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
 
   return (
     <header className="site-header">
@@ -25,7 +34,7 @@ const Navbar = () => {
         <nav className="desktop-nav" aria-label="Primary navigation">{links.map((link) => <NavLink key={link.to} to={link.to} className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}>{link.label}</NavLink>)}</nav>
         <div className="header-actions">
           <Link to="/registration" className="button button-small button-primary">Registration <ArrowUpRight aria-hidden="true" /></Link>
-          <button type="button" className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-controls="mobile-navigation" aria-expanded={open} onClick={() => setOpen((value) => !value)}>{open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</button>
+          <button ref={menuButton} type="button" className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-controls="mobile-navigation" aria-expanded={open} onClick={() => setOpen((value) => !value)}>{open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</button>
         </div>
       </div>
       {open && <nav id="mobile-navigation" className="mobile-nav site-container open" aria-label="Mobile navigation">{links.map((link) => <NavLink key={link.to} to={link.to} className={({ isActive }) => `mobile-nav-link${isActive ? " active" : ""}`}>{link.label}</NavLink>)}<Link to="/registration" className="button button-primary mobile-register">Registration</Link></nav>}

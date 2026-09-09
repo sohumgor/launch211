@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import Seo from "@/components/Seo";
-import { event as eventDetails, sponsorTiers } from "@/content/site";
+import { event as eventDetails } from "@/content/site";
 
 const GetInvolved = () => {
   const [preparedMessage, setPreparedMessage] = useState("");
@@ -79,9 +79,7 @@ const GetInvolved = () => {
 
         <section className="section partner-section" id="sponsors" tabIndex={-1}>
           <div className="site-container">
-            <div className="section-heading-row"><div><p className="eyebrow">Sponsorship</p><h2>Five ways to back the conference.</h2></div><p>Sponsorship supports student awards, workshops, and access to real-world business experience.</p></div>
-            <div className="tier-list">{sponsorTiers.map((tier) => <article className="tier-card" key={tier.name}><div className="tier-summary"><h3>{tier.name}</h3><div className="tier-amount">{tier.amount}</div><p>{tier.note}</p></div><div className="tier-benefits"><p>Included benefits</p><ul>{tier.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul></div></article>)}</div>
-            <div className="sponsor-inquiry"><p><strong>Looking for a different fit?</strong> Custom partnerships are available.</p><a className="text-link" href="#inquiry">Start a sponsorship inquiry <ArrowRight aria-hidden="true" /></a></div>
+            <div className="section-heading-row"><div><p className="eyebrow">Sponsorship</p><h2>Coming soon.</h2></div><p>Meet the sponsors supporting LaunchPoint. Partner announcements and logos will be shared here soon.</p></div>
           </div>
         </section>
       </main>

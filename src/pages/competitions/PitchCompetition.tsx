@@ -1,4 +1,127 @@
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
-import Footer from "@/components/Footer"; import Navbar from "@/components/Navbar"; import PageHero from "@/components/PageHero"; import Seo from "@/components/Seo"; import { prizeLevels } from "@/content/site";
-const PitchCompetition=()=> <div className="site-shell"><Seo title="Venture Pitch | LaunchPoint" description="Prepare and present an original venture to an investor-style panel."/><Navbar/><main><PageHero eyebrow="Prepared competition" title="Venture Pitch" intro="Build an original business concept, make the case for it, and defend your assumptions before an investor-style judging panel."/><section className="section"><div className="site-container content-grid"><aside className="content-aside"><h2 className="aside-heading">Competition brief</h2><dl><div><dt>Preparation</dt><dd>Before the conference</dd></div><div><dt>Presentation</dt><dd>7 minutes</dd></div><div><dt>Questions</dt><dd>3 minutes</dd></div><div><dt>Awards</dt><dd>$500 / $300 / $200</dd></div></dl></aside><div className="prose-block"><h2>Make the idea investable.</h2><p>A strong pitch connects a meaningful problem with a believable solution and a practical path to market. Judges will look for clear reasoning—not polished buzzwords.</p><h2>What to cover</h2><ul>{["The customer and problem","Your solution and value proposition","Market and competitive context","Business or revenue model","Go-to-market plan","Key assumptions, risks, and next steps"].map(x=><li key={x}><CheckCircle2 size={16}/> {x}</li>)}</ul><h2>How the room works</h2><p>Teams present for up to seven minutes, followed by three minutes of judge questions. The official rulebook will include team size, allowed materials, technology, scoring weights, and submission requirements before registration opens.</p><div className="callout"><strong>Competition awards</strong><p>{prizeLevels.map(x=>`${x.place}: ${x.amount}`).join(" · ")} per competition. Official rules will explain award eligibility and disbursement.</p></div><a className="button button-dark" href="/documents/Venture_Pitch.pdf" target="_blank" rel="noreferrer">View reference brief <ArrowUpRight aria-hidden="true"/></a></div></div></section></main><Footer/></div>;
-export default PitchCompetition;
+import CompetitionGuide, { type Guide } from "@/components/CompetitionGuide";
+
+const guide: Guide = {
+  "title": "Venture Pitch",
+  "eyebrow": "Prepared competition",
+  "draft": true,
+  "intro": "Build an original real or hypothetical business with your team. Present your idea, explain the market, and defend how you would reach your first customers.",
+  "facts": [
+    {
+      "label": "Team",
+      "value": "2–4 members"
+    },
+    {
+      "label": "Preparation",
+      "value": "Before the event"
+    },
+    {
+      "label": "Presentation",
+      "value": "7 minutes"
+    },
+    {
+      "label": "Questions",
+      "value": "2 minutes"
+    }
+  ],
+  "phases": [
+    {
+      "title": "Develop your venture",
+      "time": "Before",
+      "detail": "Research your market, test your assumptions, and prepare a pitch for one original company, product, or service. Google Slides or PowerPoint can support your presentation."
+    },
+    {
+      "title": "Present your pitch",
+      "time": "7 min",
+      "detail": "Tell the story of your business and cover the rubric criteria. You will receive a one-minute warning and must stop when time is called."
+    },
+    {
+      "title": "Defend your decisions",
+      "time": "2 min",
+      "detail": "Answer questions about your idea, market research, business model, and strategy. Every team member must answer at least one question."
+    }
+  ],
+  "preparationTitle": "Build a pitch with substance.",
+  "preparationIntro": "Use these seven areas to structure your presentation. Support your story with real market data, customer research, and clear reasoning.",
+  "preparation": [
+    {
+      "title": "Company purpose",
+      "detail": "Explain what your company does and who it serves in one clear sentence."
+    },
+    {
+      "title": "The problem",
+      "detail": "Identify a specific customer pain point. Show evidence that it matters and explain why existing solutions fall short."
+    },
+    {
+      "title": "Solution & value proposition",
+      "detail": "Show how your idea solves that problem and makes the customer’s life better."
+    },
+    {
+      "title": "Why now?",
+      "detail": "Explain the changes in technology, behavior, or the market that make this the right time for your idea."
+    },
+    {
+      "title": "Market size & customer validation",
+      "detail": "Estimate your total market, the portion you can serve, and the share you can realistically reach first (TAM, SAM, SOM). Identify early customers and evidence that they would pay."
+    },
+    {
+      "title": "Competition & positioning",
+      "detail": "Research direct and indirect competitors. Explain your advantage and why customers would choose your solution."
+    },
+    {
+      "title": "Business model & go-to-market",
+      "detail": "Explain your pricing and how you make money. Name the channels, partners, or outreach steps that will take you from zero to your first sale."
+    }
+  ],
+  "materials": [
+    {
+      "title": "Your team brings",
+      "items": [
+        "At least one working device with internet access.",
+        "Your pitch materials, notes, or script. Devices and printed notes are allowed.",
+        "Slides, visual aids, props, or a product, if useful. Slides are recommended but optional in the draft guide."
+      ]
+    },
+    {
+      "title": "LaunchPoint provides",
+      "items": [
+        "Internet access.",
+        "A projector and screen for your pitch deck and visuals.",
+        "Judges to hear your pitch and ask follow-up questions."
+      ]
+    }
+  ],
+  "participation": "All members must present and participate in the pitch, and each must answer at least one question. Practice together so everyone understands the full business.",
+  "scoring": [
+    {
+      "title": "Business strategy & presentation",
+      "points": 70,
+      "detail": "Seven criteria, each worth 10 points: company purpose, problem, solution and value, why now, market size and validation, competitive positioning, and business model and go-to-market."
+    },
+    {
+      "title": "Communication & presentation",
+      "points": 30,
+      "detail": "Three criteria, each worth 10 points: clarity and articulation, professional presence and team participation, and Q&A responses."
+    }
+  ],
+  "scoringNote": "Based on the dedicated draft rubric and the detailed rubric appended to the event guide. Each criterion is scored 0–10. The draft guide’s summary table differs; the final scoring breakdown is pending confirmation.",
+  "resources": [
+    {
+      "title": "Venture Pitch event guide",
+      "detail": "Format, materials, preparation advice, and pitch requirements.",
+      "href": "https://drive.google.com/file/d/1Z6tWl8ItNbf5rbJpui1v6uY_1rij0K4e/view",
+      "draft": true
+    },
+    {
+      "title": "Venture Pitch judging rubric",
+      "detail": "All 10 criteria and the four performance levels used for scoring.",
+      "href": "https://drive.google.com/file/d/1JEVbx-oOVWLfNu0NYOKPT0ffVkqt6BTM/view",
+      "draft": true
+    }
+  ],
+  "other": {
+    "title": "Business Roleplay",
+    "href": "/competitions/roleplay"
+  }
+};
+
+export default function PitchCompetition() { return <CompetitionGuide guide={guide} />; }

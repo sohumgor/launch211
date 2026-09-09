@@ -89,13 +89,13 @@ const Index = () => (
           <div className="experience-lead">
             <p className="eyebrow eyebrow-light">Beyond the competition</p>
             <h2>Meet the people behind the work.</h2>
-            <p>Workshops are designed as conversations and hands-on sessions—not long lectures. Students explore fields, hear honest career stories, and practice the skills professionals use every day.</p>
+            <p>Explore Marketing, Finance, and Business Management at LaunchPoint. Workshop details will be announced soon.</p>
             <Link to="/events/workshops" className="button button-light">Explore workshops <ArrowRight aria-hidden="true" /></Link>
           </div>
           <div className="experience-list">
-            <article><Presentation aria-hidden="true" /><div><span>01</span><h3>Marketing & branding</h3><p>Positioning, customer insight, storytelling, and go-to-market thinking.</p></div></article>
-            <article><BriefcaseBusiness aria-hidden="true" /><div><span>02</span><h3>Finance & investing</h3><p>How professionals assess opportunity, risk, value, and financial choices.</p></div></article>
-            <article><GraduationCap aria-hidden="true" /><div><span>03</span><h3>Entrepreneurship</h3><p>From identifying a problem to testing an idea and building momentum.</p></div></article>
+            <article><Presentation aria-hidden="true" /><div><span>01</span><h3>Marketing Workshop</h3></div></article>
+            <article><BriefcaseBusiness aria-hidden="true" /><div><span>02</span><h3>Finance Workshop</h3></div></article>
+            <article><GraduationCap aria-hidden="true" /><div><span>03</span><h3>Business Management Workshop</h3></div></article>
           </div>
         </div>
       </section>
