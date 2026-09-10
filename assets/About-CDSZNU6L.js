@@ -1,4 +1,4 @@
-import{j as e,L as a}from"./index-CWCypxAo.js";import{c as n,S as i,N as t,F as r}from"./Seo-AY2KFTJK.js";import{P as o}from"./PageHero-CGpVzGAp.js";import{U as d,c}from"./Palatine_Chamber_Logo-C6e5XuFC.js";import{A as l}from"./arrow-right-DC8MiS75.js";/**
+import{j as e,L as a}from"./index-k-SU10yU.js";import{c as n,S as i,N as t,F as r}from"./Seo-BSvkxyEv.js";import{P as o}from"./PageHero-D_diYS1K.js";import{U as d,c}from"./Palatine_Chamber_Logo-Bw1wkmG8.js";import{A as l}from"./arrow-right-C3dlts9_.js";/**
  * @license lucide-react v0.462.0 - ISC
  *
  * This source code is licensed under the ISC license.
