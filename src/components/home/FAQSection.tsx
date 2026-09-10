@@ -95,11 +95,11 @@ const FAQSection = () => {
           </p>
 
           <a
-            href="mailto:launch211team@gmail.com"
+            href="mailto:teamlaunchpt@gmail.com"
             className="inline-flex items-center gap-2 text-lg md:text-xl font-semibold text-primary hover:text-accent transition-colors"
           >
             <Mail className="w-5 h-5" />
-            launch211team@gmail.com
+            teamlaunchpt@gmail.com
           </a>
         </div>
       </div>

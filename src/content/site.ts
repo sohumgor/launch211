@@ -8,7 +8,7 @@ export const event = {
   address: "1111 N. Rohlwing Road, Palatine, Illinois",
   attendance: "75–120 students",
   registrationFee: "Approximately $20 (pending confirmation)",
-  email: "launch211team@gmail.com",
+  email: "teamlaunchpt@gmail.com",
   instagram: "https://www.instagram.com/official_launchpoint/",
   instagramLabel: "@official_launchpoint",
 };
