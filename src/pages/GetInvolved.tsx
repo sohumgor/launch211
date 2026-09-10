@@ -1,5 +1,4 @@
-import { FormEvent, useState } from "react";
-import { ArrowRight, Gavel, Handshake, Presentation } from "lucide-react";
+import { ArrowRight, Gavel, Handshake, Mail, Presentation } from "lucide-react";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
@@ -7,34 +6,6 @@ import Seo from "@/components/Seo";
 import { event as eventDetails } from "@/content/site";
 
 const GetInvolved = () => {
-  const [preparedMessage, setPreparedMessage] = useState("");
-  const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "failed">("idle");
-
-  const handleSubmit = (formEvent: FormEvent<HTMLFormElement>) => {
-    formEvent.preventDefault();
-    const form = new FormData(formEvent.currentTarget);
-    const name = String(form.get("name") || "");
-    const email = String(form.get("email") || "");
-    const organization = String(form.get("organization") || "Not provided");
-    const interest = String(form.get("interest") || "General involvement");
-    const message = String(form.get("message") || "");
-    const subject = `LaunchPoint involvement: ${interest}`;
-    const body = `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nInterest: ${interest}\n\n${message}`;
-
-    setPreparedMessage(`To: ${eventDetails.email}\nSubject: ${subject}\n\n${body}`);
-    setCopyStatus("idle");
-    window.location.href = `mailto:${eventDetails.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(preparedMessage);
-      setCopyStatus("copied");
-    } catch {
-      setCopyStatus("failed");
-    }
-  };
-
   return (
     <div className="site-shell">
       <Seo title="Get Involved" description="Judge, teach, mentor, volunteer, or sponsor LaunchPoint." />
@@ -54,26 +25,19 @@ const GetInvolved = () => {
         </section>
 
         <section className="section inquiry-section" id="inquiry" tabIndex={-1}>
-          <div className="site-container inquiry-grid">
+          <div className="site-container direct-contact-layout">
             <div className="inquiry-copy">
-              <p className="eyebrow eyebrow-light">Involvement inquiry</p>
-              <h2>Tell us how you would like to help.</h2>
-              <p>Share a few details and we will prepare an email to the student team. Nothing is sent until you review and send it from your email app.</p>
-              <div className="inquiry-contact"><span>Prefer to write directly?</span><a href={`mailto:${eventDetails.email}`}>{eventDetails.email}</a></div>
+              <p className="eyebrow eyebrow-light">Work with LaunchPoint</p>
+              <h2>Help students learn from real experience.</h2>
+              <p>Judges, workshop leaders, mentors, volunteers, and community partners can contact the student team directly.</p>
             </div>
-
-            <form className="inquiry-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-field"><label htmlFor="inquiry-name">Name <span>required</span></label><input id="inquiry-name" name="name" autoComplete="name" required /></div>
-                <div className="form-field"><label htmlFor="inquiry-email">Email <span>required</span></label><input id="inquiry-email" name="email" type="email" autoComplete="email" required /></div>
-              </div>
-              <div className="form-field"><label htmlFor="inquiry-organization">Organization <span>optional</span></label><input id="inquiry-organization" name="organization" autoComplete="organization" /></div>
-              <div className="form-field"><label htmlFor="inquiry-interest">I am interested in <span>required</span></label><select id="inquiry-interest" name="interest" defaultValue="" required><option value="" disabled>Select one</option><option>Judging</option><option>Leading a workshop</option><option>Speaking or mentoring</option><option>Sponsorship</option><option>Volunteering</option><option>Another kind of support</option></select></div>
-              <div className="form-field"><label htmlFor="inquiry-message">Message <span>required</span></label><textarea id="inquiry-message" name="message" rows={5} placeholder="Tell us about your background, idea, or availability." required /></div>
-              <button className="button button-primary" type="submit" aria-describedby="inquiry-helper">Open prepared email <ArrowRight aria-hidden="true" /></button>
-              <p className="form-helper" id="inquiry-helper">You will review and send the message from your email app. Nothing is sent automatically.</p>
-              {preparedMessage && <div className="form-status" role="status" aria-live="polite"><strong>Email draft prepared.</strong><p>If your email app did not open, copy the prepared message and email it to <a href={`mailto:${eventDetails.email}`}>{eventDetails.email}</a>.</p><button className="copy-button" type="button" onClick={handleCopy}>{copyStatus === "copied" ? "Message copied" : "Copy prepared message"}</button>{copyStatus === "failed" && <p className="copy-error" role="alert">Copying was blocked by your browser. Please email the address above directly.</p>}</div>}
-            </form>
+            <div className="direct-contact-card">
+              <Mail aria-hidden="true" />
+              <p className="eyebrow">Direct contact</p>
+              <h3>Email the LaunchPoint team.</h3>
+              <p>Tell us how you would like to participate, your organization, and any relevant availability.</p>
+              <a className="button button-primary" href={`mailto:${eventDetails.email}?subject=${encodeURIComponent("LaunchPoint involvement")}`}>Email {eventDetails.email} <ArrowRight aria-hidden="true" /></a>
+            </div>
           </div>
         </section>
 

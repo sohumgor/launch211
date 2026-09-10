@@ -1,14 +1,13 @@
 export const event = {
   name: "LaunchPoint Fall Conference",
   shortName: "LaunchPoint",
-  date: "Saturday, October 17, 2026",
-  dateShort: "October 17, 2026",
+  date: "October 2026 · Date TBD",
+  dateShort: "October 2026 · Date TBD",
   time: "8:00 AM–2:15 PM",
   venue: "Palatine High School",
   address: "1111 N. Rohlwing Road, Palatine, Illinois",
   attendance: "75–120 students",
   registrationFee: "Approximately $20 (pending confirmation)",
-  interestForm: "https://forms.gle/h2XLN4iWxxHHy2BE6",
   email: "launch211team@gmail.com",
   instagram: "https://www.instagram.com/official_launchpoint/",
   instagramLabel: "@official_launchpoint",
@@ -29,7 +28,7 @@ export const competitions = [
     eyebrow: "Prepared competition",
     title: "Venture Pitch",
     summary: "Build an original business concept, make the case for it, and defend your assumptions before an investor-style judging panel.",
-    format: "7-minute pitch + 2-minute Q&A · Draft",
+    format: "7-minute pitch + 2-minute Q&A",
     preparation: "Prepared before the conference",
     href: "/competitions/pitch",
   },
@@ -90,7 +89,7 @@ export const faqs = [
   },
   {
     question: "Is registration open?",
-    answer: "Full conference registration is not open yet. Students can complete the interest form now and receive updates when eligibility, fees, team rules, and registration details are finalized.",
+    answer: "Full conference registration is not open yet. Eligibility, fees, team rules, and registration details will be posted here once they are finalized.",
   },
   {
     question: "Can students enter both competitions?",
@@ -98,7 +97,7 @@ export const faqs = [
   },
   {
     question: "How many students are on a team?",
-    answer: "Both current event guides specify teams of 2–4 students. Every member presents and answers at least one judge question. Venture Pitch guidance is currently in draft form.",
+    answer: "Both current event guides specify teams of 2–4 students. Every member presents and answers at least one judge question.",
   },
   {
     question: "Is there a registration fee?",

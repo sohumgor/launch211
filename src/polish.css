@@ -54,6 +54,23 @@ h1,h2 { text-wrap:balance; }
 .footer-bottom { color:#a4b4c5; font-size:.73rem; }
 
 .page-hero .guide-draft-note { display:inline-block; color:#eed28e; font:500 .76rem/1.65 var(--body); border-left:2px solid var(--gold); padding-left:14px; }
+
+.ticket-date-tbd strong { font-size: clamp(3.35rem, 5vw, 4.8rem); letter-spacing: -.04em; }
+
+.direct-contact-layout { display:grid; grid-template-columns: .9fr 1.1fr; align-items:center; gap:clamp(42px, 8vw, 110px); }
+.direct-contact-layout .inquiry-copy { position:static; }
+.direct-contact-card { border-top:4px solid var(--gold); background:#fff; color:var(--ink); box-shadow:0 28px 70px rgba(3, 15, 35, .22); padding:clamp(30px, 5vw, 48px); }
+.direct-contact-card > svg { width:30px; height:30px; margin-bottom:28px; color:var(--teal-ink); }
+.direct-contact-card .eyebrow { margin-bottom:13px; }
+.direct-contact-card h3 { margin-bottom:14px; font:400 clamp(2rem, 4vw, 3.4rem)/1 var(--display); }
+.direct-contact-card > p:not(.eyebrow) { max-width:560px; margin-bottom:28px; color:var(--muted); }
+.direct-contact-card .button { max-width:100%; overflow-wrap:anywhere; text-align:center; }
+
+@media (max-width: 780px) {
+  .direct-contact-layout { grid-template-columns:1fr; gap:32px; }
+  .direct-contact-card { padding:28px 22px; }
+  .direct-contact-card .button { width:100%; }
+}
 .guide-fact-strip { background:#fff; border-bottom:1px solid var(--line); }
 .guide-facts { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); padding:0; }
 .guide-facts>div { padding:27px 24px; border-right:1px solid var(--line); }

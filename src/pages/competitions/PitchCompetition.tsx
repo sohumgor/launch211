@@ -3,7 +3,6 @@ import CompetitionGuide, { type Guide } from "@/components/CompetitionGuide";
 const guide: Guide = {
   "title": "Venture Pitch",
   "eyebrow": "Prepared competition",
-  "draft": true,
   "intro": "Build an original real or hypothetical business with your team. Present your idea, explain the market, and defend how you would reach your first customers.",
   "facts": [
     {
@@ -78,7 +77,7 @@ const guide: Guide = {
       "items": [
         "At least one working device with internet access.",
         "Your pitch materials, notes, or script. Devices and printed notes are allowed.",
-        "Slides, visual aids, props, or a product, if useful. Slides are recommended but optional in the draft guide."
+        "Slides, visual aids, props, or a product, if useful. Slides are recommended but optional."
       ]
     },
     {
@@ -103,19 +102,17 @@ const guide: Guide = {
       "detail": "Three criteria, each worth 10 points: clarity and articulation, professional presence and team participation, and Q&A responses."
     }
   ],
-  "scoringNote": "Based on the dedicated draft rubric and the detailed rubric appended to the event guide. Each criterion is scored 0–10. The draft guide’s summary table differs; the final scoring breakdown is pending confirmation.",
+  "scoringNote": "Based on the dedicated rubric and the detailed rubric appended to the event guide. Each criterion is scored 0–10. The event guide’s summary table differs; the final scoring breakdown is pending confirmation.",
   "resources": [
     {
       "title": "Venture Pitch event guide",
       "detail": "Format, materials, preparation advice, and pitch requirements.",
-      "href": "https://drive.google.com/file/d/1Z6tWl8ItNbf5rbJpui1v6uY_1rij0K4e/view",
-      "draft": true
+      "href": "https://drive.google.com/file/d/1Z6tWl8ItNbf5rbJpui1v6uY_1rij0K4e/view"
     },
     {
       "title": "Venture Pitch judging rubric",
       "detail": "All 10 criteria and the four performance levels used for scoring.",
-      "href": "https://drive.google.com/file/d/1JEVbx-oOVWLfNu0NYOKPT0ffVkqt6BTM/view",
-      "draft": true
+      "href": "https://drive.google.com/file/d/1JEVbx-oOVWLfNu0NYOKPT0ffVkqt6BTM/view"
     }
   ],
   "other": {

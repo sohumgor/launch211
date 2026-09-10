@@ -7,7 +7,7 @@ import Seo from "@/components/Seo";
 import { prizeLevels } from "@/content/site";
 
 export type Guide = {
-  title: string; eyebrow: string; intro: string; draft?: boolean;
+  title: string; eyebrow: string; intro: string;
   facts: { label: string; value: string }[];
   phases: { title: string; time: string; detail: string }[];
   preparationTitle: string; preparationIntro: string;
@@ -16,7 +16,7 @@ export type Guide = {
   participation: string;
   scoring: { title: string; points: number; detail: string }[];
   scoringNote: string;
-  resources: { title: string; detail: string; href: string; draft?: boolean }[];
+  resources: { title: string; detail: string; href: string }[];
   other: { title: string; href: string };
 };
 const sections = [["format", "Format"], ["prepare", "Preparation"], ["materials", "Materials"], ["scoring", "Scoring"], ["resources", "Guides & resources"]];
@@ -26,8 +26,7 @@ export default function CompetitionGuide({ guide }: { guide: Guide }) {
     <Seo title={guide.title} description={guide.intro} />
     <Navbar />
     <main>
-      <PageHero eyebrow={guide.eyebrow} title={guide.title} intro={guide.intro}
-        aside={guide.draft && <p className="guide-draft-note">Draft guide · Current preparation details, subject to final confirmation.</p>} />
+      <PageHero eyebrow={guide.eyebrow} title={guide.title} intro={guide.intro} />
       <div className="guide-fact-strip"><dl className="site-container guide-facts">{guide.facts.map(f => <div key={f.label}><dt>{f.label}</dt><dd>{f.value}</dd></div>)}</dl></div>
       <div className="site-container guide-layout">
         <aside className="guide-sidebar">
@@ -55,8 +54,8 @@ export default function CompetitionGuide({ guide }: { guide: Guide }) {
           </section>
           <section id="resources" tabIndex={-1} className="guide-section">
             <p className="eyebrow">05 / Resources</p><h2>Prepare with the materials.</h2><p className="guide-intro">Event guides, scoring criteria, and practice materials. PDFs open in Google Drive.</p>
-            <div className="guide-resources">{guide.resources.map(r => <a key={r.href} href={r.href} target="_blank" rel="noreferrer" className="guide-resource"><FileText aria-hidden="true" /><div><span className="guide-resource-label">PDF{r.draft ? " · Draft" : ""}</span><h3>{r.title}</h3><p>{r.detail}</p></div><ArrowUpRight aria-hidden="true" /></a>)}</div>
-            <p className="guide-small-print">Materials updated September 9, 2026. {guide.draft ? "Venture Pitch materials are drafts; check back for the final version." : "Practice cases are examples. The conference scenario is revealed when preparation begins."}</p>
+            <div className="guide-resources">{guide.resources.map(r => <a key={r.href} href={r.href} target="_blank" rel="noreferrer" className="guide-resource"><FileText aria-hidden="true" /><div><span className="guide-resource-label">PDF</span><h3>{r.title}</h3><p>{r.detail}</p></div><ArrowUpRight aria-hidden="true" /></a>)}</div>
+            <p className="guide-small-print">Materials updated September 9, 2026.{guide.title === "Business Roleplay" ? " Practice cases are examples. The conference scenario is revealed when preparation begins." : " Check back here for any competition updates."}</p>
             <div className="guide-note"><strong>Competition awards</strong><p>{prizeLevels.map(p => p.place + ": " + p.amount).join(" · ")} per competition. Official rules will explain award eligibility and disbursement.</p></div>
           </section>
           <div className="guide-next"><Link to="/registration" className="button button-dark">Registration updates <ArrowRight aria-hidden="true" /></Link><Link to={guide.other.href} className="text-link">Explore {guide.other.title} <ArrowRight aria-hidden="true" /></Link></div>

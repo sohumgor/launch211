@@ -29,10 +29,10 @@ const Index = () => (
 
           <aside className="event-ticket" aria-label="Conference details">
             <div className="ticket-topline"><span>LaunchPoint 2026</span><span>LP—01</span></div>
-            <div className="ticket-date"><span>OCT</span><strong>17</strong><span>2026</span></div>
+            <div className="ticket-date ticket-date-tbd"><span>OCT</span><strong>TBD</strong><span>2026</span></div>
             <div className="ticket-rule" />
             <dl className="ticket-details">
-              <div><dt><CalendarDays aria-hidden="true" />Date</dt><dd>Saturday, October 17</dd></div>
+              <div><dt><CalendarDays aria-hidden="true" />Date</dt><dd>October 2026 · Date TBD</dd></div>
               <div><dt><MapPin aria-hidden="true" />Venue</dt><dd>Palatine High School</dd></div>
               <div><dt><Users aria-hidden="true" />Expected</dt><dd>75–120 students</dd></div>
             </dl>
@@ -103,7 +103,7 @@ const Index = () => (
       <section className="section schedule-section">
         <div className="site-container schedule-layout">
           <div className="schedule-heading">
-            <p className="eyebrow">One focused Saturday</p>
+            <p className="eyebrow">One focused conference day</p>
             <h2>The conference day at a glance.</h2>
             <p>{event.date}<br />{event.time}<br />{event.venue}</p>
             <Link to="/schedule" className="text-link">View schedule notes <ArrowRight aria-hidden="true" /></Link>
@@ -143,7 +143,7 @@ const Index = () => (
       <section className="closing-cta">
         <div className="site-container closing-cta-inner">
           <div><p className="eyebrow eyebrow-light">Fall 2026</p><h2>Your next business decision starts here.</h2></div>
-          <div><p>Tell us you’re interested and be first to receive registration, competition, and workshop updates.</p><a href={event.interestForm} target="_blank" rel="noreferrer" className="button button-light">Complete the interest form <ArrowRight aria-hidden="true" /></a></div>
+          <div><p>Registration details will be posted as soon as eligibility, team selection, and the final conference date are confirmed.</p><Link to="/registration" className="button button-light">View registration updates <ArrowRight aria-hidden="true" /></Link></div>
         </div>
       </section>
     </main>

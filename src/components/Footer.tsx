@@ -10,7 +10,7 @@ const Footer = () => (
         <p>A student-led regional business conference connecting high school students with the local business community.</p>
       </div>
       <div><p className="footer-label">Explore</p><div className="footer-links"><Link to="/about">About</Link><Link to="/competitions/pitch">Venture Pitch</Link><Link to="/competitions/roleplay">Business Roleplay</Link><Link to="/events/workshops">Workshops</Link><Link to="/schedule">Schedule</Link></div></div>
-      <div><p className="footer-label">Get involved</p><div className="footer-links"><Link to="/registration">Student updates</Link><Link to="/get-involved#inquiry">Judges and volunteers</Link><Link to="/get-involved#sponsors">Sponsors</Link><a href={event.interestForm} target="_blank" rel="noreferrer">Interest form</a></div></div>
+      <div><p className="footer-label">Get involved</p><div className="footer-links"><Link to="/registration">Student updates</Link><Link to="/get-involved#inquiry">Judges and volunteers</Link><Link to="/get-involved#sponsors">Sponsors</Link></div></div>
       <div><p className="footer-label">Contact</p><div className="footer-links footer-contact"><a href={`mailto:${event.email}`}><Mail aria-hidden="true" />{event.email}</a><a href={event.instagram} target="_blank" rel="noreferrer"><Instagram aria-hidden="true" />{event.instagramLabel}</a><span><MapPin aria-hidden="true" />Palatine, Illinois</span></div></div>
     </div>
     <div className="site-container footer-bottom"><span>&copy; {new Date().getFullYear()} LaunchPoint</span><span>Built for students ready to learn by doing.</span></div>
@@ -18,4 +18,3 @@ const Footer = () => (
 );
 
 export default Footer;
-
